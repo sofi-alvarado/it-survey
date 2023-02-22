@@ -1,0 +1,27 @@
+.offcanvas{
+    --bs-offcanvas-bg: #0B093B !important;
+    opacity: 0.9;
+}
+
+.white-font {
+    color: white;
+}
+
+#navbar-container {
+    background-color: #0B093B !important;
+    margin-top: 0;    
+    
+  }
+
+
+
+/*Quitar flecha del DropDownList*/
+.dropdown-toggle::after {
+    display: none !important; 
+}
+
+/*Centrar elementos de forma vertical*/
+.center-vertically {
+    align-items: center;
+    display: flex;
+}
