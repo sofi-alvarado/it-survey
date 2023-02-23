@@ -35,25 +35,59 @@ const NavBar = () => {
                                     </Offcanvas.Title>
                                 </Offcanvas.Header>
                                 <Offcanvas.Body>
-                                    <Nav className="white-font ms-auto">
-                                        <Nav.Link href="#action1" className="center-vertically fs-5">
-                                            GENERAL
-                                        </Nav.Link>
-                                        <Nav.Link href="#action2" className="center-vertically fs-5">
-                                            Link
+                                    <Nav className="d-block white-font roboto-slab-bold  ms-auto">
+                                        <Nav.Link href="#action1" className="center-vertically">
+                                           General
                                         </Nav.Link>
                                         <NavDropdown
-                                            title="Dropdown"
+                                            title="Perfil del Developer"
                                             id={`offcanvasNavbarDropdown-expand-${expand}`}
                                         >
-                                            <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                                            <NavDropdown.Item href="#action4">
-                                                Another action
-                                            </NavDropdown.Item>
+                                            <NavDropdown.Item href="#action3">Educacion</NavDropdown.Item>
                                             <NavDropdown.Divider />
-                                            <NavDropdown.Item href="#action5">
-                                                Something else here
-                                            </NavDropdown.Item>
+                                            <NavDropdown.Item href="#action4">Aprendizaje de programacion</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action5">Experiencia</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action6">Rol del desarrollador</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action7">Territorios clave</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action8">Demografia</NavDropdown.Item>
+                                        </NavDropdown>
+                                        <NavDropdown
+                                            title="Tecnologia"
+                                            id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                        >
+                                            <NavDropdown.Item href="#action3">Lenguajes mas populares</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action4">Control de Versiones</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action5">Web3</NavDropdown.Item>
+                                        </NavDropdown>
+                                        <NavDropdown
+                                            title="Trabajo"
+                                            id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                        >
+                                            <NavDropdown.Item href="#action3">Situación de Empleo</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action4">Información de la Empresa</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action5">Salario</NavDropdown.Item>
+                                        </NavDropdown>
+                                        <NavDropdown
+                                            title="Desarroladores Profesionales"
+                                            id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                        >
+                                            <NavDropdown.Item href="#action3">Experiencia del desarrollador</NavDropdown.Item>
+                                        </NavDropdown>
+                                        <NavDropdown
+                                            title="Metodologia"
+                                            id={`offcanvasNavbarDropdown-expand-${expand}`}
+                                        >
+                                            <NavDropdown.Item href="#action3">Feedback</NavDropdown.Item>
+                                            <NavDropdown.Divider />
+                                            <NavDropdown.Item href="#action4">Participantes</NavDropdown.Item>
                                         </NavDropdown>
                                     </Nav>
                                 </Offcanvas.Body>

@@ -1,6 +1,6 @@
 .offcanvas{
-    --bs-offcanvas-bg: #0B093B !important;
-    opacity: 0.9;
+    --bs-offcanvas-bg: #111c32f5 !important;
+    opacity: 1.0;
 }
 
 .white-font {
@@ -14,6 +14,14 @@
   }
 
 
+  .roboto-slab-bold {
+    font-weight: 700;
+    font-size: 1.41538rem;
+  }
+
+  .navbar-toggler { 
+    --bs-navbar-toggler-icon-bg: url("../../assets/menu.png"); 
+}
 
 /*Quitar flecha del DropDownList*/
 .dropdown-toggle::after {
