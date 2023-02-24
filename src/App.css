@@ -1,8 +1,11 @@
-.App {
-  text-align: center;
+
+.text-justify {
+  text-align: justify;
 }
 
-
+.font-size {
+  font-size: 1.31538rem;
+}
 
 .App-header {
   display: flex;
