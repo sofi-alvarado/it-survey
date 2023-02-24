@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 const GeneralPage = () => {
     return (
         <>
-        <Container fluid className='my-5'>
+        <Container id="general" fluid className='my-5'>
             <div className='row d-flex justify-content-center align-items-center h-200'>
                 <div className='col-12'>
                     <Card className='bg-dark my-5 mx-auto' style={{ borderRadius: '1rem', border: 'none', maxWidth: '900px' }}>

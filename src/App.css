@@ -16,12 +16,15 @@
   color: white;
 }
 
+h1 {
+  color: white
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Reem Kufi", sans-serif !important;
+  font-family: "Roboto", sans-serif !important;
 }
 img {
   max-width: 100%;
@@ -38,10 +41,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  background-color: #f6f6f6;
-}
-
 nav {
   display: flex;
   align-items: center;
@@ -51,13 +50,7 @@ nav {
 .navbar-menu-container {
   display: none;
 }
-.navbar-links-container a {
-  margin-right: 3rem;
-  text-decoration: none;
-  color: black;
-  font-size: 1.1rem;
-  font-weight: 600;
-}
+
 .primary-button {
   padding: 0.9rem 1.75rem;
   background-color: white;
@@ -69,9 +62,7 @@ nav {
   font-weight: 600;
   transition: 0.2s;
 }
-.navbar-cart-icon {
-  font-size: 1.15rem;
-}
+
 .primary-button:hover {
   background-color: rgb(234, 234, 234);
 }
@@ -92,8 +83,9 @@ nav {
   max-width: 700px;
 }
 .home-image-section {
-  max-width: 600px;
+  max-width: 800px;
   flex: 1;
+ 
 }
 .home-text-section {
   flex: 1;
@@ -104,19 +96,18 @@ nav {
 }
 .primary-heading {
   font-size: clamp(2rem, 5vw, 4rem);
-  color: #4c4c4c;
   /* line-height: 5rem; */
   max-width: 600px;
 }
 .primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
-  color: #6a6a6a;
   margin: 1.5rem 0rem;
+  color: #828282;
 }
 .secondary-button {
   padding: 1rem 2.5rem;
-  background-color: #fe9e0d;
+  background-color:  #AB0B0B;
   outline: none;
   border: none;
   border-radius: 5rem;
@@ -134,7 +125,7 @@ nav {
   font-size: 1.5rem;
 }
 .secondary-button:hover {
-  background-color: #e48f0f;
+  background-color:  #9b0f0f;
 }
 .about-section-container {
   margin-top: 20rem;
@@ -335,7 +326,7 @@ nav {
     font-size: 1rem;
   }
   .home-bannerImage-container {
-    max-width: 600px;
+    max-width: 700px;
   }
 }
 @media (max-width: 800px) {
@@ -363,7 +354,7 @@ nav {
   .home-image-section,
   .about-section-image-container {
     width: 100%;
-    max-width: 400px;
+    max-width: 700px;
   }
   .primary-heading {
     text-align: center;

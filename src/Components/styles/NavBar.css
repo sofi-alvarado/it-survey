@@ -6,7 +6,6 @@
 }
 
 #navbar-container {
-    background: #202c44 !important;
     margin-top: 0;    
     --bs-navbar-toggler-focus-width: 0rem;
   }
@@ -31,7 +30,7 @@
 }
 
 .navbar-toggler:hover { 
-   background-color: #111c32f5;
+   background-color: #9b0f0f;
 }
 
 
