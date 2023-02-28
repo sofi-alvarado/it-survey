@@ -1,0 +1,13 @@
+.general-card {
+    background: linear-gradient(90deg, rgba(85,114,171,1) 0%, rgba(133,169,238,1) 100%);
+    color: white;
+}
+
+.basic-info-card {
+    background: linear-gradient(135deg,#f8aa14 2%,#f9d98c 98%);
+    color: black;
+}
+
+.basic-info-card > h1 {
+    font-weight: bold;
+}

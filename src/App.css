@@ -16,9 +16,7 @@
   color: white;
 }
 
-h1 {
-  color: white
-}
+
 
 * {
   margin: 0;
@@ -98,13 +96,19 @@ nav {
   font-size: clamp(2rem, 5vw, 4rem);
   /* line-height: 5rem; */
   max-width: 600px;
+  color: white !important;
 }
 .primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 500px;
   margin: 1.5rem 0rem;
-  color: #828282;
+  color: #cdcdcd;
 }
+
+.secundary-text {
+  color: #cdcdcd;
+}
+
 .secondary-button {
   padding: 1rem 2.5rem;
   background-color:  #AB0B0B;

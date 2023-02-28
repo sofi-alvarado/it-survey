@@ -1,14 +1,16 @@
 import './App.css';
 
 import Home from './Components/Home';
-import GeneralPage from './Components/GeneralPage';
+import GeneralContainer from './Containers/GeneralContainer';
+import BasicContainer from './Containers/BasicContainer';
 
 function App() {
   return (
       <div className="App">
       
         <Home />
-        <GeneralPage />
+        <GeneralContainer />
+        <BasicContainer />
     </div>
   );
 }
