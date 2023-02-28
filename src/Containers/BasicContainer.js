@@ -7,6 +7,19 @@ import '../Components/styles/Charts.css'
 
 export const options = {
     indexAxis: 'y',
+    scales: {
+      x: {
+        grid: {
+          display: false
+        }
+      },
+      y: {
+        beginAtZero: true,
+        grid: {
+          display: false
+        }
+      }
+    },
     responsive: true,
     plugins: {
       legend: {
