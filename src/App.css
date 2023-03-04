@@ -99,15 +99,9 @@ nav {
   color: white !important;
 }
 .primary-text {
-  font-size: clamp(1rem, 3vw, 1.5rem);
-  max-width: 500px;
-  margin: 1.5rem 0rem;
   color: #cdcdcd;
 }
 
-.secundary-text {
-  color: #cdcdcd;
-}
 
 .secondary-button {
   padding: 1rem 2.5rem;

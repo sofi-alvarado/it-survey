@@ -2,48 +2,6 @@ import React from 'react';
 import CardItem from '../Components/CardItem';
 import Container from 'react-bootstrap/Container';
 import BarChart from '../Components/BarChart';
-import myData from "../resultados_totales.json";
-import '../Components/styles/Charts.css'
-
-export const options = {
-    indexAxis: 'y',
-    scales: {
-      x: {
-        grid: {
-          display: false
-        }
-      },
-      y: {
-        beginAtZero: true,
-        grid: {
-          display: false
-        }
-      }
-    },
-    responsive: true,
-    plugins: {
-      legend: {
-        display: false,
-        position: 'right',
-      },
-      title: {
-        display: true,
-        text: '¿Cuál de los siguientes describe tu situación de empleo? ',
-      },
-    },
-  };
-  
-  const labels = Object.keys(myData.situacionDeEmpleo);
-  
-  export const data = {
-    labels,
-    datasets: [
-      {
-        data: labels.map((item) => myData.situacionDeEmpleo[item]),
-        backgroundColor: '#f8aa14',
-      }
-    ],
-  };
 
 const BasicContainer = () => {
     return (
@@ -55,15 +13,16 @@ const BasicContainer = () => {
             />
             <Container>
                 <hr className="hr border border-white border-3" />
-                <div className='row d-flex justify-content-center align-items-center'>
-                    <h2 className='primary-text'>Información Básica</h2>
-                        <p className='secundary-text'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <BarChart options={options} data={data} />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                    <h1>Información Básica</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                          <BarChart />
+                        
+                        <h1>¿Cuál de los siguientes describe tu situación de empleo?</h1>
                 </div>
             </Container>
 
         </>
-
     )
 }
 

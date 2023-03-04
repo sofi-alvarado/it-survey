@@ -1,15 +1,15 @@
 import './styles/NavBar.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+//import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-scroll";
 
 
 const NavBar = () => {
-    const [y, setY] = useState(window.scrollY);
+    //const [y, setY] = useState(window.scrollY);
     const [sidebarOpen, toggleSidebar] = useState(false);
 
 
@@ -60,7 +60,7 @@ const NavBar = () => {
                                     </Link>
                                     <Link onClick={() => toggleSidebar(!sidebarOpen)}
                                         className="nav-link"
-                                        to="general"
+                                        to="tecnology"
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>
