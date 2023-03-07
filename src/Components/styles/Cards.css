@@ -12,6 +12,11 @@
     font-weight: bold;
 }
 
+.education-card {
+    background: linear-gradient(135deg,#2c52b2 2%,#5d88f3 98%);
+    color: white;
+}
+
 .tecnology-card {
     background: linear-gradient(135deg,#9d3030 2%,#e35050 98%);
     color: white;

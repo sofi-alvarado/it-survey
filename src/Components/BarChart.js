@@ -9,7 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import myData from "../resultados_totales.json";
+
 import '../Components/styles/Charts.css'
 
 ChartJS.register(
@@ -21,8 +21,8 @@ ChartJS.register(
   Legend
 );
 
-const BarChart = () => {
-  
+const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
+
   const options = {
     indexAxis: 'y',
     scales: { 
@@ -34,6 +34,7 @@ const BarChart = () => {
           display: false,
         },
         ticks: {
+          autoSkip: autoSkipp,
           color: 'white',
           font: {
             size: 15,
@@ -55,6 +56,7 @@ const BarChart = () => {
       }
 
     },
+    //maintainAspectRatio: false,
     responsive: true,
     plugins: {
       legend: {
@@ -67,42 +69,45 @@ const BarChart = () => {
     }
   };
 
-  
-  let labels = Object.keys(myData.situacionDeEmpleo);
+  if(chartInfo) {
+    let labels = Object.keys(chartInfo);
 
+      function getGradient(ctx, chartArea) {
+          const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+          gradientBg.addColorStop(0, firstColor);
+          gradientBg.addColorStop(0, firstColor);
+          gradientBg.addColorStop(0.5, secondColor);
+          gradientBg.addColorStop(1, secondColor);
+          return gradientBg;
+        }
+      
+    const data = {
+      labels,
+      datasets: [
+        {
+          data: labels.map((item) => chartInfo[item]),
+          backgroundColor: (context) => {
+            const chart = context.chart;
+            const { ctx, chartArea, scales } = chart;
+            if(!chartArea) {
+              return null
+            };
+            return getGradient(ctx, chartArea, scales)
+          },
+          borderRadius: 8,
+          borderSkipped: false,
+          barPercentage: 0.5,
+          categoryPercentage: 1
+        }
+      ],
+    };
 
-     function getGradient(ctx, chartArea) {
-        const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
-        gradientBg.addColorStop(0, '#f8aa14');
-        gradientBg.addColorStop(0, '#f8aa14');
-        gradientBg.addColorStop(0.5, '#f9d98c');
-        gradientBg.addColorStop(1, '#f9d98c');
-    
-        return gradientBg;
-      }
-    
-  const data = {
-    labels,
-    datasets: [
-      {
-        data: labels.map((item) => myData.situacionDeEmpleo[item]),
-        backgroundColor: (context) => {
-          const chart = context.chart;
-          const { ctx, chartArea, scales } = chart;
-          if(!chartArea) {
-            return null
-          };
-          return getGradient(ctx, chartArea, scales)
-        },
-        borderRadius: 8,
-        borderSkipped: false,
-        barPercentage: 0.5,
-        categoryPercentage: 1
-      }
-    ],
-  };
-
-  return <Bar options={options} data={data} />;
+    return <Bar options={options} data={data} />;
+  } else {
+    return (<>
+      <div><h1>404</h1></div>
+    </>)
+  }
 }
 
 export default BarChart;

@@ -5,92 +5,9 @@ import BarChart from '../Components/BarChart';
 import myData from "../resultados_totales.json";
 import '../Components/styles/Charts.css'
 
-export const options = {
-    indexAxis: 'y',
-    scales: { 
-      y: {
-        grid: {
-          display: false,
-        },
-        border: {
-          display: false,
-        },
-        
-        ticks: {
-            autoSkip: false,
-          color: 'white',
-          font: {
-            size: 15,
-            family: 'Roboto'
-          }
-        }
-      },
-      x: {
-        beginAtZero: true,
-        grid: {
-          display: false,
-        },
-        border: {
-          display: false,
-        },
-        ticks: {
-          display: false,
-        }
-      }
-
-    },
-    responsive: true,
-    plugins: {
-      legend: {
-        display: false,
-        position: 'right',
-        labels: {
-          font: {
-            size: 15,
-            color: 'pink'
-          }
-        }
-      },
-      title: {
-        display: false,
-      },
-    }
-  };
-
-  const labels = Object.keys(myData.lenguajesProgramar);
- 
-  export const data = {
-    labels,
-    datasets: [
-      {
-        data: labels.map((item) => myData.lenguajesProgramar[item]),
-        backgroundColor: (context) => {
-          const chart = context.chart;
-          const { ctx, chartArea, scales } = chart;
-          if(!chartArea) {
-            return null
-          };
-          return getGradient(ctx, chartArea, scales)
-        },
-        borderRadius: 4,
-        borderSkipped: false,
-        barPercentage: 0.5,
-        categoryPercentage: 1.5
-      }
-    ],
-  };
-
-  function getGradient(ctx, chartArea) {
-    const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
-    gradientBg.addColorStop(0, '#9d3030');
-    gradientBg.addColorStop(0, '#9d3030');
-    gradientBg.addColorStop(0.5, '#e35050');
-    gradientBg.addColorStop(1, '#e35050');
-
-    return gradientBg;
-  }
-
 const TecnologyContainer = () => {
+    const firstColor='#9d3030';
+    const secondColor='#e35050';
     return (
         <>
             <CardItem
@@ -103,12 +20,156 @@ const TecnologyContainer = () => {
                 <div className='row d-flex justify-content-center align-items-center primary-text'>
                     <h1>Tecnología y Cultura</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                          <BarChart options={options} data={data} />
+                        <BarChart 
+                          chartInfo={myData.lenguajesProgramar} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
                         
-                        <h1>¿Cuál de los siguientes describe tu situación de empleo?</h1>
+                        <h5>¿Con cuál de los siguientes lenguajes de programación, scripting o markup has trabajado extensivamente durante el ultimo año?</h5>
                 </div>
             </Container>
-
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.cloud} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Con cuál de los siguientes proveedores de nube has trabajado extensivamente durante el ultimo año?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.webFrameworks} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Con cuál de las siguientes frameworks y tecnologías web has trabajado extensivamente durante el ultimo año?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.libs} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Con cuál de las siguientes frameworks y librerías has trabajado extensivamente durante el ultimo año?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.devTools} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Con cuál de las siguientes herramientas de desarrollo has trabajado extensivamente durante el ultimo año?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.os} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Cuál es el principal sistema operativo que usas para trabajar?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.git} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Cuál sistema de control de versiones usas?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.versionControl} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Qué servicio para sistema de control usas?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.blockchain} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Cómo es tu opinión sobre blockchain, crypto y Web3?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.infosec} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Tienes alguna educación o entrenamiento en seguridad informática?</h5>
+                </div>
+            </Container>
+            <Container>
+                <hr className="hr border border-white border-3" />
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
+                        <BarChart 
+                          chartInfo={myData.implementaciones} 
+                          autoSkipp={false} 
+                          firstColor={firstColor}
+                          secondColor={secondColor}
+                          />
+                        
+                        <h5>¿Cuál de las siguientes opciones es implementada donde trabajas?</h5>
+                </div>
+            </Container>
         </>
 
     )
