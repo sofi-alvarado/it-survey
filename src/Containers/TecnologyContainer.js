@@ -3,7 +3,6 @@ import CardItem from '../Components/CardItem';
 import Container from 'react-bootstrap/Container';
 import BarChart from '../Components/BarChart';
 import myData from "../resultados_totales.json";
-import '../Components/styles/Charts.css'
 
 const TecnologyContainer = () => {
     const firstColor='#9d3030';

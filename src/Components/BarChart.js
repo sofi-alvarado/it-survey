@@ -10,8 +10,6 @@ import {
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
-import '../Components/styles/Charts.css'
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -36,6 +34,7 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
         ticks: {
           autoSkip: autoSkipp,
           color: 'white',
+          align: 'end',
           font: {
             size: 15,
             family: 'Roboto'
@@ -96,7 +95,7 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
           },
           borderRadius: 8,
           borderSkipped: false,
-          barPercentage: 0.5,
+          barPercentage: 0.9,
           categoryPercentage: 1
         }
       ],
