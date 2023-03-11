@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
 import myData from "../resultados_totales.json";
-import { RiQuestionnaireFill } from "react-icons/ri"
+import { RiQuestionnaireFill } from "react-icons/ri";
 
 const BasicContainer = () => {
     const firstColor = '#f8aa14';

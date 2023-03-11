@@ -58,7 +58,11 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
 
     },
     responsive: true,
-   
+    layout: {
+      padding: {
+        right: 50
+      }
+    },
       plugins: {
         legend: {
           display: false,
@@ -67,6 +71,7 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
         title: {
           display: false,
         },
+        
         datalabels: {
           formatter: (value, ctx) => {
             const datapoints = ctx.chart.data.datasets[0].data
