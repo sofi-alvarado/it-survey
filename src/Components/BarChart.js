@@ -70,7 +70,6 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
 
   if(chartInfo) {
     let labels = Object.keys(chartInfo);
-
       function getGradient(ctx, chartArea) {
           const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
           gradientBg.addColorStop(0, firstColor);

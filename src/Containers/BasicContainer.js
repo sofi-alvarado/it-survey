@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
 import myData from "../resultados_totales.json";
+import { RiQuestionnaireFill } from "react-icons/ri"
 
 const BasicContainer = () => {
     const firstColor = '#f8aa14';
@@ -27,7 +28,7 @@ const BasicContainer = () => {
                             secondColor={secondColor}
                         />
                     </div>
-                    <h5>¿Cuál de los siguientes describe tu situación de empleo?</h5>
+                    <span><RiQuestionnaireFill /> ¿Cuál de los siguientes describe tu situación de empleo?</span>
 
                 </div>
             </Container>
@@ -42,7 +43,7 @@ const BasicContainer = () => {
                             secondColor={secondColor}
                         />
                     </div>
-                    <h5>¿Cuál de las siguientes opciones te describe mejor?</h5>
+                    <span><RiQuestionnaireFill /> ¿Cuál de las siguientes opciones te describe mejor?</span>
                 </div>
             </Container>
             <Container>
@@ -56,7 +57,7 @@ const BasicContainer = () => {
                             secondColor={secondColor}
                         />
                     </div>
-                    <span>¿Cómo describes tu modalidad de trabajo?</span>
+                    <span><RiQuestionnaireFill /> ¿Cómo describes tu modalidad de trabajo?</span>
                 </div>
             </Container>
 
