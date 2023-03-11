@@ -9,6 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(
   CategoryScale,
@@ -16,13 +17,14 @@ ChartJS.register(
   BarElement,
   Title,
   Tooltip,
-  Legend
+  Legend, ChartDataLabels
 );
 
 const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
 
   const options = {
     indexAxis: 'y',
+    
     scales: { 
       y: {
         grid: {
@@ -55,17 +57,32 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
       }
 
     },
-    //maintainAspectRatio: false,
     responsive: true,
-    plugins: {
-      legend: {
-        display: false,
-        position: 'right'
+   
+      plugins: {
+        legend: {
+          display: false,
+          position: 'right'
+        },
+        title: {
+          display: false,
+        },
+        datalabels: {
+          formatter: (value, ctx) => {
+            const datapoints = ctx.chart.data.datasets[0].data
+            const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
+            const percentage = value / total * 100
+            return percentage.toFixed(2) + "%";
+          },
+          anchor: 'end',
+          align: 'right',
+          color: 'white',
+          font: {
+            weight: 'bold'
+          },
+        },
       },
-      title: {
-        display: false,
-      },
-    }
+    
   };
 
   if(chartInfo) {
@@ -83,6 +100,7 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
       labels,
       datasets: [
         {
+          label: 'Cantidad de respuestas',
           data: labels.map((item) => chartInfo[item]),
           backgroundColor: (context) => {
             const chart = context.chart;
@@ -100,7 +118,7 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
       ],
     };
 
-    return <Bar options={options} data={data} />;
+    return <Bar data={data}  options={options} />;
   } else {
     return (<>
       <div><h1>404</h1></div>

@@ -31,27 +31,7 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
       ],
     };
 
-
- 
-     // customDatalabels plugin block
-     const customDatalabels = {
-      id: 'customDatalabels',
-      afterDatasetsDraw(chart, args, pluginOptions) {
-        const { ctx, data, chartArea: { top, bottom, left, right, width, height } } = chart;
-        ctx.save();
-        data.datasets[0].data.forEach((datapoint, index) => {
-          const { x, y } = chart.getDatasetMeta(0).data[index].tooltipPosition()
-          ctx.font = 'bold 12px sans-serif';
-          ctx.fillStyle = data.datasets[0].borderColor[index];
-          ctx.textAlign = 'center';
-          ctx.textBaseline = 'middle';
-          ctx.fillText(datapoint, x, y);
-        })
-      }
-    }
-
     const options = {
-      
         legend: {
           display: false
         },
@@ -63,12 +43,15 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
         datalabels: {
           formatter: (value, ctx) => {
             const datapoints = ctx.chart.data.datasets[0].data
-             const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
+            const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
             const percentage = value / total * 100
             return percentage.toFixed(0) + "%";
           },
           display: true,
-          color: "white"
+          color: "white",
+          font: {
+            weight: 'bold'
+          },
         }
       }
       
