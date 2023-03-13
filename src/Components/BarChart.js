@@ -36,7 +36,7 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
         ticks: {
           autoSkip: autoSkipp,
           color: 'white',
-          align: 'end',
+          align: 'start',
           font: {
             size: 15,
             family: 'Roboto'

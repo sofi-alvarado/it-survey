@@ -35,16 +35,14 @@ const EducationContainer = () => {
             </Container>
             <Container>
                 <hr className="hr border border-white border-1" />
-                <div className='row d-flex primary-text'>
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
                           <BarChart 
                             chartInfo={myData.aprendizaje}
                             autoSkipp={false} 
                             firstColor={firstColor}
                             secondColor={secondColor}
                             />
-                        </div>
                         <span><RiQuestionnaireFill /> ¿Cómo obtuviste tus conocimientos de tecnología? Selecciona todos los que apliquen</span>
                 </div>
             </Container>
@@ -64,31 +62,27 @@ const EducationContainer = () => {
             </Container>
             <Container>
                 <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
                           <BarChart 
                             chartInfo={myData.experiencia} 
                             autoSkipp={false} 
                             firstColor={firstColor}
                             secondColor={secondColor}
                             />
-                        </div>
                         <span><RiQuestionnaireFill /> Sin incluir tu educación, ¿cuántos años tiene de trabajar en tecnología?</span>
                 </div>
             </Container>
             <Container>
                 <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
                           <BarChart 
                             chartInfo={myData.trabajoTipo} 
                             autoSkipp={false} 
                             firstColor={firstColor}
                             secondColor={secondColor}
                             />
-                        </div>
                         <span><RiQuestionnaireFill /> ¿Cuál de los siguientes describe tu trabajo actual?</span>
                 </div>
             </Container>
@@ -139,16 +133,14 @@ const EducationContainer = () => {
             </Container>
             <Container>
                 <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
                           <BarChart 
                             chartInfo={myData.certs} 
                             autoSkipp={false} 
                             firstColor={firstColor}
                             secondColor={secondColor}
                             />
-                        </div>
                         <span><RiQuestionnaireFill /> ¿Tienes alguna certificación de las siguientes tecnologías?</span>
                 </div>
             </Container>
@@ -199,16 +191,15 @@ const EducationContainer = () => {
             </Container>
             <Container>
                 <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
+              
                           <BarChart 
                             chartInfo={myData.inglesLearning} 
                             autoSkipp={false} 
                             firstColor={firstColor}
                             secondColor={secondColor}
                             />
-                        </div>
                         <span><RiQuestionnaireFill /> ¿Cómo aprendiste a hablar inglés?</span>
                 </div>
             </Container>

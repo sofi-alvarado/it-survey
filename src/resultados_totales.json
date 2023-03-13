@@ -221,9 +221,9 @@
         "Scala": 1,
         "PowerShell": 3,
         "Apps Script ": 1,
-        "Ninguno": 1,
         "Go": 1,
-        "Visual Basic NET": 1
+        "Visual Basic NET": 1,
+        "Ninguno": 1
     },
     "cloud": {
         "AWS": 28,
@@ -260,10 +260,10 @@
         "Angular.js": 5,
         "ninguna": 2,
         "Ruby on Rails": 2,
-        "Frameworks de automatización: Selenium y RestAssured": 1,
+        "Selenium y RestAssured": 1,
+        "Nest.js": 1,
         "Otro ": 1,
-        "Ninguna": 1,
-        "Nest.js": 1
+        "Ninguna": 1
     },
     "libs": {
         "Apache Kafka": 9,
@@ -275,15 +275,14 @@
         "Xamarin": 3,
         "Oracle": 1,
         "TensorFlow": 5,
-        "Ninguna": 2,
         "Otro": 1,
         "Apache Spark": 2,
         "Hadoop": 1,
         "Torch/PyTorch": 2,
         "Spring Boot": 1,
-        "react": 1,
-        "ninguna": 1,
-        "Ionic": 1
+        "React": 1,
+        "Ionic": 1,
+        "Ninguna": 3
     },
     "devTools": {
         "Chef": 1,
@@ -299,8 +298,7 @@
         "Homebrew": 5,
         "Oracle": 1,
         "Devexpress": 1,
-        "ninguna": 1,
-        "Ninguna ": 1
+        "Ninguna ": 2
     },
     "os": {
         "macOS": 20,
@@ -311,18 +309,18 @@
     },
     "git": {
         "Git": 93,
-        "Ninguno": 8,
-        "Otro": 11
+        "Otro": 11,
+        "Ninguno": 8
     },
     "versionControl": {
         "GitHub": 62,
         "GitLab": 32,
         "Sistema personalizado": 5,
         "Bitbucket": 15,
-        "Ninguno": 5,
         "Azure Repos": 9,
+        "AWS CodeCommit": 1,
         "Otro": 5,
-        "AWS CodeCommit": 1
+        "Ninguno": 5
     },
     "blockchain": {
         "Muy Desfavorable": 5,
@@ -333,7 +331,7 @@
         "No tengo una opinión al respecto ": 14
     },
     "infosec": {
-        "Entramineto de security awareness ": 7,
+        "Entrenamiento de security awareness ": 7,
         "Educación académica": 65,
         "Entrenamiento especializado ": 4
     },
