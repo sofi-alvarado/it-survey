@@ -3,12 +3,14 @@ import CardItem from '../Components/CardItem';
 import Container from 'react-bootstrap/Container';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
+import LineChart from '../Components/LineChart';
 import myData from "../resultados_totales.json";
 import { RiQuestionnaireFill } from "react-icons/ri";
 
 const EducationContainer = () => {
     const firstColor='#2c52b2';
     const secondColor='#5d88f3';
+  
     return (
         <>
             <CardItem
@@ -109,9 +111,9 @@ const EducationContainer = () => {
                 <hr className="hr border border-white border-3" />
                 <div className='row d-flex primary-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
-                          <BarChart 
-                            chartInfo={myData.compensacionAnual} 
+                        <div className="col chart-container d-flex justify-content-center" >
+                          <BarChart
+                            chartInfo={myData.compensacionMensual}
                             autoSkipp={false} 
                             firstColor={firstColor}
                             secondColor={secondColor}
