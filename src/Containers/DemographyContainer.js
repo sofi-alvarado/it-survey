@@ -63,16 +63,14 @@ const DemographyContainer = () => {
             </Container>
             <Container>
                 <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
+                <div className='row d-flex justify-content-center align-items-center primary-text'>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
                         <BarChart 
                           chartInfo={myData.atributos} 
                           autoSkipp={false} 
                           firstColor={firstColor}
                           secondColor={secondColor}
                           />
-                          </div>
                         <span><RiQuestionnaireFill /> ¿Consideras tener alguno de los siguientes atributos personales?</span>
                 </div>
             </Container>

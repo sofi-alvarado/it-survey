@@ -6,6 +6,7 @@ import BasicContainer from './Containers/BasicContainer';
 import EducationContainer from './Containers/EducationContainer';
 import TecnologyContainer from './Containers/TecnologyContainer';
 import DemographyContainer from './Containers/DemographyContainer';
+import FeedbackContainer from './Containers/FeedbackContainer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <EducationContainer />
         <TecnologyContainer />
         <DemographyContainer />
+        <FeedbackContainer />
     </div>
   );
 }

@@ -22,8 +22,12 @@
     color: white;
 }
 
-
 .demography-card {
     background: linear-gradient(135deg,#0b8f20 2%,#1ab032 98%);
+    color: white;
+}
+
+.feedback-card {
+    background: linear-gradient(135deg,#da6008 2%,#ee8f59 98%);;
     color: white;
 }
