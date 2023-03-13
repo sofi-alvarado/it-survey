@@ -361,12 +361,12 @@
         "Si, por mucho tiempo": 7
     },
     "atributos": {
-        "Ninguno de los anteriores": 72,
-        "Prefiero no decir": 3,
         "Tengo problemas emocionales": 12,
         "Tengo problemas de salud físicos (gastrointestinales, respiratorios, etc)": 8,
         "Tengo problemas de aprendizaje ": 7,
-        "Tengo una invalidez física total o parcial": 1
+        "Tengo una invalidez física total o parcial": 1,
+        "Prefiero no decir": 3,
+        "Ninguno de los anteriores": 72
     },
     "departamento": {
         "San Salvador": 61,

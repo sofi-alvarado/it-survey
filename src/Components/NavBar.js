@@ -68,7 +68,7 @@ const NavBar = () => {
                                     </Link>
                                     <Link onClick={() => toggleSidebar(!sidebarOpen)}
                                         className="nav-link"
-                                        to="general"
+                                        to="demography"
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>
