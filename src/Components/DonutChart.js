@@ -21,9 +21,8 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
             '#2c52b2',
             '#f8aa14',
             '#9d3030',
-            'rgba(75, 192, 192)',
-            'rgba(153, 102, 255)',
-            'rgba(255, 159, 64)',
+            '#1ab032',
+            '#ee8f59',
           ],
           borderWidth: 0,
           hoverOffset: 15
@@ -32,14 +31,19 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
     };
 
     const options = {
+      
+      plugins: {
         legend: {
-          display: false
+          position: 'bottom',
+          labels: {
+            color: 'white'
+          },
         },
         layout: {
           padding: 15
         
         },
-      plugins: {
+       
         datalabels: {
           formatter: (value, ctx) => {
             const datapoints = ctx.chart.data.datasets[0].data

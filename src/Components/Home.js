@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from './NavBar';
 import BannerBackground from '../assets/home-banner-background.png';
 import BannerImage from '../assets/home-banner-image.png';
+import { Link } from "react-scroll";
 
 const Home = () => {
     return (
@@ -17,9 +18,9 @@ const Home = () => {
                         <p className='primary-text'>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
                         </p>
-                        <button className="secondary-button">
-                            Order Now {" "}
-                        </button>
+                        <Link className="secondary-button" to="basic-info">
+                            Ver {" "}
+                        </Link>
                     </div>
                     <div className='home-image-section'>
                         <img src={BannerImage} alt="" ></img>

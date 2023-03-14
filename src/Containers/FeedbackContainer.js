@@ -2,7 +2,6 @@ import React from 'react';
 import CardItem from '../Components/CardItem';
 import Container from 'react-bootstrap/Container';
 import BarChart from '../Components/BarChart';
-import DonutChart from '../Components/DonutChart';
 import myData from "../resultados_totales.json";
 import { RiQuestionnaireFill } from "react-icons/ri";
 

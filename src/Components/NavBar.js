@@ -1,5 +1,5 @@
 import './styles/NavBar.css';
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,22 +9,26 @@ import { Link } from "react-scroll";
 
 
 const NavBar = () => {
-    //const [y, setY] = useState(window.scrollY);
-    const [sidebarOpen, toggleSidebar] = useState(false);
+    const [show, setShow] = useState(false);
+    const toggleOffCanvas = () => {
+        setShow((show) => !show);
+    };
 
 
     return (
         <>
             {[false].map((expand) => (
-                <Navbar key={expand} expand={expand} className="mt-0 mb-3 fixed-top"
-                    id="navbar-container" >
+                <Navbar  key={expand} expand={expand} className="animate mt-0 mb-3 fixed-top"
+                    id="navbar-container">
                     <Container fluid>
                         <Navbar.Brand href="#"></Navbar.Brand>
-                        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="border-0" />
+                        <Navbar.Toggle onClick={toggleOffCanvas} aria-controls={`offcanvasNavbar-expand-${expand}`} className="border-0" />
 
                         <Navbar.Offcanvas
+                            show={show}
+                            onHide={toggleOffCanvas}
                             scroll={true}
-                            backdrop={false}
+                            backdrop={true}
                             id={`offcanvasNavbar-expand-${expand}`}
                             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
                             placement="end">
@@ -34,7 +38,8 @@ const NavBar = () => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="d-block ms-auto">
-                                    <Link onClick={() => toggleSidebar(!sidebarOpen)}
+                                    <Link 
+                                        onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="general"
                                         spy={true}
@@ -42,7 +47,8 @@ const NavBar = () => {
                                         offset={-60}>
                                         General
                                     </Link>
-                                    <Link onClick={() => toggleSidebar(!sidebarOpen)}
+                                    <Link 
+                                        onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="basic-info"
                                         spy={true}
@@ -50,7 +56,8 @@ const NavBar = () => {
                                         offset={-60}>
                                         Información Básica
                                     </Link>
-                                    <Link onClick={() => toggleSidebar(!sidebarOpen)}
+                                    <Link 
+                                        onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="education-info"
                                         spy={true}
@@ -58,7 +65,8 @@ const NavBar = () => {
                                         offset={-60}>
                                         Educación, Trabajo y Carrera
                                     </Link>
-                                    <Link onClick={() => toggleSidebar(!sidebarOpen)}
+                                    <Link 
+                                        onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="tecnology"
                                         spy={true}
@@ -66,7 +74,8 @@ const NavBar = () => {
                                         offset={-60}>
                                         Tecnología y Cultura
                                     </Link>
-                                    <Link onClick={() => toggleSidebar(!sidebarOpen)}
+                                    <Link 
+                                        onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="demography"
                                         spy={true}
@@ -74,7 +83,8 @@ const NavBar = () => {
                                         offset={-60}>
                                         Demografía
                                     </Link>
-                                    <Link onClick={() => toggleSidebar(!sidebarOpen)}
+                                    <Link
+                                        onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="feedback"
                                         spy={true}
