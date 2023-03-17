@@ -1,13 +1,12 @@
-import './styles/NavBar.css';
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-//import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Link } from "react-scroll";
+import { BsGithub } from "react-icons/bs";
 
-
+import './styles/NavBar.css';
 const NavBar = () => {
     const [show, setShow] = useState(false);
     const toggleOffCanvas = () => {
@@ -18,7 +17,7 @@ const NavBar = () => {
     return (
         <>
             {[false].map((expand) => (
-                <Navbar  key={expand} expand={expand} className="animate mt-0 mb-3 fixed-top"
+                <Navbar key={expand} expand={expand} className="animate mt-0 mb-3 fixed-top"
                     id="navbar-container">
                     <Container fluid>
                         <Navbar.Brand href="#"></Navbar.Brand>
@@ -38,7 +37,7 @@ const NavBar = () => {
                             </Offcanvas.Header>
                             <Offcanvas.Body>
                                 <Nav className="d-block ms-auto">
-                                    <Link 
+                                    <Link
                                         onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="general"
@@ -47,7 +46,7 @@ const NavBar = () => {
                                         offset={-60}>
                                         General
                                     </Link>
-                                    <Link 
+                                    <Link
                                         onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="basic-info"
@@ -56,7 +55,7 @@ const NavBar = () => {
                                         offset={-60}>
                                         Información Básica
                                     </Link>
-                                    <Link 
+                                    <Link
                                         onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="education-info"
@@ -65,7 +64,7 @@ const NavBar = () => {
                                         offset={-60}>
                                         Educación, Trabajo y Carrera
                                     </Link>
-                                    <Link 
+                                    <Link
                                         onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="tecnology"
@@ -74,7 +73,7 @@ const NavBar = () => {
                                         offset={-60}>
                                         Tecnología y Cultura
                                     </Link>
-                                    <Link 
+                                    <Link
                                         onClick={toggleOffCanvas}
                                         className="nav-link"
                                         to="demography"

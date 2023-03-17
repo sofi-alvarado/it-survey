@@ -5,6 +5,11 @@ import BannerImage from '../assets/home-banner-image.png';
 import { Link } from "react-scroll";
 
 const Home = () => {
+    const text = {
+        title: 'Encuesta para profesionales en Tecnologia | El Salvador 2022-2023',
+        github: 'Echale un vistazo al repositorio de este proyecto en ',
+        button: 'Ver los resultados'
+    }
     return (
         <>
             <div className='home-container'>
@@ -13,13 +18,13 @@ const Home = () => {
                     <div className='home-bannerImage-container'>
                         <img src={BannerBackground} alt="" />
                     </div>
-                    <div className='home-text-section mx-5'>
-                        <h1 className='primary-heading'>Encuesta de profesionales de Tecnologia, El Salvador 2022</h1>
+                    <div className='home-text-section d-flex justify-content-center mx-5'>
+                        <h1 className='primary-heading'>{text.title}</h1>
                         <p className='primary-text'>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
+                            {text.github} <a className="link" href='https://github.com/sofi-alvarado/it-survey'>GitHub</a>
                         </p>
                         <Link className="secondary-button" to="basic-info">
-                            Ver {" "}
+                            {text.button} {" "}
                         </Link>
                     </div>
                     <div className='home-image-section'>

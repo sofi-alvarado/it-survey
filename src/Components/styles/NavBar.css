@@ -25,6 +25,7 @@
     border-bottom-width: 1px;
     border-bottom-color: rgb(209, 209, 209);
     margin: 10px;
+    cursor: pointer;
 }
 
 .navbar-toggler { 
@@ -34,8 +35,5 @@
 .navbar-toggler:hover { 
    background-color: #bbbbbb4e;
 }
-
-
-
 
 
