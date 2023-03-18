@@ -53,6 +53,28 @@ nav {
   display: none;
 }
 
+/*Charts Header Styling */
+.white {
+  color: white !important
+}
+.title {
+  color: #8c95a8
+}
+
+.title-size {
+  font-size: 1.41538rem;
+}
+
+.chart-title-size {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: bold;
+}
+
+.question {
+  color: #8c95a8;
+  font-size: 0.8rem;
+}
+
 .primary-button {
   padding: 0.9rem 1.75rem;
   background-color: white;
