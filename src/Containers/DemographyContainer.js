@@ -1,92 +1,91 @@
 import React from 'react';
 import CardItem from '../Components/CardItem';
-import Container from 'react-bootstrap/Container';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
 import myData from "../resultados_totales.json";
-import { RiQuestionnaireFill } from "react-icons/ri";
+import ChartComponent from '../Components/ChartComponent';
 
 const DemographyContainer = () => {
     const firstColor='#0b8f20';
     const secondColor='#1ab032';
+
+    const text = {
+        title: 'Demografía',
+        chartTitle: 'Chart Title',
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.',
+        question1: '¿Cuál es tu edad?',
+        question2: '¿Cuál de los siguientes te describe mejor?',
+        question3: '¿Alguna vez has trabajado en call-center?',
+        question4: '¿Consideras tener alguno de los siguientes atributos personales?',
+        question5: '¿En cuál departamento de El Salvador vives?',
+    }
+
     return (
         <>
             <CardItem
                 id='demography'
                 className='demography-card'
-                title='Demografía'
+                title={text.title}
             />
-            <Container>
-                <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
-                    <h1>Demografía</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
-                            <BarChart 
-                            chartInfo={myData.edad} 
-                            autoSkipp={false} 
-                            firstColor={firstColor}
-                            secondColor={secondColor}
-                            />
-                          </div>
-                          <span><RiQuestionnaireFill /> ¿Cuál es tu edad?</span>
-                </div>
-            </Container>
-            <Container>
-                <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
-                        <DonutChart 
-                          chartInfo={myData.genero} 
-                          firstColor={firstColor}
-                          secondColor={secondColor}
-                          />
-                          </div>
-                        <span><RiQuestionnaireFill /> ¿Cuál de los siguientes te describe mejor?</span>
-                </div>
-            </Container>
-            <Container>
-                <hr className="hr border border-white border-3" />
-                <div className='row d-flex primary-text'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <div className="col chart-container d-flex justify-content-center">
-                        <BarChart 
-                          chartInfo={myData.callcenter} 
-                          autoSkipp={false} 
-                          firstColor={firstColor}
-                          secondColor={secondColor}
-                          />
-                          </div>
-                        <span><RiQuestionnaireFill /> ¿Alguna vez has trabajado en call-center?</span>
-                </div>
-            </Container>
-            <Container>
-                <hr className="hr border border-white border-3" />
-                <div className='row d-flex justify-content-center align-items-center primary-text'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <BarChart 
-                          chartInfo={myData.atributos} 
-                          autoSkipp={false} 
-                          firstColor={firstColor}
-                          secondColor={secondColor}
-                          />
-                        <span><RiQuestionnaireFill /> ¿Consideras tener alguno de los siguientes atributos personales?</span>
-                </div>
-            </Container>
-            <Container>
-                <hr className="hr border border-white border-3" />
-                <div className='row d-flex justify-content-center align-items-center primary-text'>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.</p>
-                        <BarChart 
-                          chartInfo={myData.departamento} 
-                          autoSkipp={false} 
-                          firstColor={firstColor}
-                          secondColor={secondColor}
-                          />
-                        <span><RiQuestionnaireFill /> ¿En cuál departamento de El Salvador vives?</span>
-                </div>
-            </Container>
+            {/* Question 1 */}
+              <ChartComponent
+                title={text.title}
+                chartTitle={text.chartTitle}
+                chartDescription={text.text}
+                chart={<BarChart
+                    chartInfo={myData.edad}
+                    autoSkipp={false} 
+                    firstColor={firstColor}
+                    secondColor={secondColor} />}
+                question={text.question1}
+            />
+            {/* Question 2 */}
+                <ChartComponent
+                title={text.title}
+                chartTitle={text.chartTitle}
+                chartDescription={text.text}
+                chart={<DonutChart
+                    chartInfo={myData.genero}
+                    firstColor={firstColor}
+                    secondColor={secondColor} />}
+                question={text.question2}
+            />
+            {/* Question 3 */}
+                <ChartComponent
+                title={text.title}
+                chartTitle={text.chartTitle}
+                chartDescription={text.text}
+                chart={<BarChart
+                    chartInfo={myData.callcenter}
+                    autoSkipp={false} 
+                    firstColor={firstColor}
+                    secondColor={secondColor} />}
+                question={text.question3}
+            />
+            {/* Question 4 */}
+                <ChartComponent
+                title={text.title}
+                chartTitle={text.chartTitle}
+                chartDescription={text.text}
+                chart={<BarChart
+                    chartInfo={myData.atributos}
+                    autoSkipp={false} 
+                    firstColor={firstColor}
+                    secondColor={secondColor} />}
+                question={text.question4}
+            />
+            {/* Question 5 */}
+                <ChartComponent
+                title={text.title}
+                chartTitle={text.chartTitle}
+                chartDescription={text.text}
+                chart={<BarChart
+                    chartInfo={myData.departamento}
+                    autoSkipp={false} 
+                    firstColor={firstColor}
+                    secondColor={secondColor} />}
+                question={text.question5}
+            />
         </>
 
     )
