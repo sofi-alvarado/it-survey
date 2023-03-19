@@ -124,9 +124,8 @@ const EducationContainer = () => {
                 title={text.title}
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
-                chart={<BarChart
+                chart={<DonutChart
                     chartInfo={myData.frequenciaDeSalario}
-                    autoSkipp={false} 
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question8}
@@ -148,9 +147,8 @@ const EducationContainer = () => {
                 title={text.title}
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
-                chart={<BarChart
+                chart={<DonutChart
                     chartInfo={myData.empresaTipo}
-                    autoSkipp={false} 
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question10}
