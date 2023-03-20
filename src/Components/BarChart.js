@@ -21,10 +21,33 @@ ChartJS.register(
 );
 
 const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
-
+  
   const options = {
-    indexAxis: 'y',
+    plugins: {
+          legend: {
+            display: false,
+            position: 'center'
+          },
+          title: {
+            display: false,
+          },
+          datalabels: {
+            formatter: (value, ctx) => {
+              const datapoints = ctx.chart.data.datasets[0].data
+              const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
+              const percentage = value / total * 100
+              return percentage.toFixed(2) + "%";
+            },
+            anchor: 'end',
+            align: 'right',
+            color: 'white',
+            font: {
+              weight: 'bold'
+            },
+          },
+        },
     
+    indexAxis: 'y',
     scales: { 
       y: {
         grid: {
@@ -36,12 +59,12 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
         ticks: {
           autoSkip: autoSkipp,
           color: 'white',
-          align: 'end',
+          align: 'center',
           font: {
-            size: 15,
             family: 'Roboto'
-          }
-        }
+          },
+       
+        },
       },
       x: {
         beginAtZero: true,
@@ -55,43 +78,20 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
           display: false,
         }
       }
-
     },
     responsive: true,
     layout: {
       padding: {
         right: 50
       }
-    },
-      plugins: {
-        legend: {
-          display: false,
-          position: 'right'
-        },
-        title: {
-          display: false,
-        },
-        
-        datalabels: {
-          formatter: (value, ctx) => {
-            const datapoints = ctx.chart.data.datasets[0].data
-            const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
-            const percentage = value / total * 100
-            return percentage.toFixed(2) + "%";
-          },
-          anchor: 'end',
-          align: 'right',
-          color: 'white',
-          font: {
-            weight: 'bold'
-          },
-        },
-      },
-    
+    }
   };
 
   if(chartInfo) {
     let labels = Object.keys(chartInfo);
+    const shortLabels = labels.map(label => label.split(/(?<=^(?:.{15})+)(?!$)/));
+    console.log(shortLabels)
+    
       function getGradient(ctx, chartArea) {
           const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
           gradientBg.addColorStop(0, firstColor);
@@ -102,7 +102,7 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
         }
       
     const data = {
-      labels,
+      labels: shortLabels,
       datasets: [
         {
           label: 'Cantidad de respuestas',
@@ -122,6 +122,8 @@ const BarChart = ({chartInfo, autoSkipp, firstColor, secondColor}) => {
         }
       ],
     };
+
+   
 
     return <Bar data={data}  options={options} />;
   } else {

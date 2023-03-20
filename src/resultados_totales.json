@@ -1,17 +1,17 @@
 {
     "situacionDeEmpleo": {
         "Empleado, tiempo completo": 86,
-        "Freelancer, contratista, consultor, trabajador independiente": 17,
         "Estudiante, tiempo medio": 6,
+        "Freelancer, contratista, consultor, trabajador independiente": 17,
         "Desempleado, en busca de empleo": 9,
         "Estudiante, tiempo completo": 7
     },
     "softwareDev": {
+        "Soy un desarrollador de software": 72,
         "No soy desarrollador, pero escribo código como parte de mi trabajo": 8,
         "No soy desarrollador, pero soy profesional de tecnología informática ": 11,
-        "Soy un desarrollador de software": 72,
-        "Estoy aprendiendo sobre tecnológica informática": 2,
-        "Estoy aprendiendo a programar": 14
+        "Estoy aprendiendo a programar": 14,
+        "Estoy aprendiendo sobre tecnológica informática": 2
     },
     "modalidadDeTrabajo": {
         "Completamente remoto": 49,
@@ -19,7 +19,7 @@
         "Presencial": 22
     },
     "educacion": {
-        "Ingeniería / Licenciatura ": 56,
+        "Ingeniería/Licenciatura ": 56,
         "Educación superior imcompleta": 17,
         "Titulo técnico ": 17,
         "Bachillerato (técnico o general)": 9,
@@ -94,20 +94,20 @@
         "Ingeniero de datos": 3,
         "Desarrollador de sistemas embebidos": 2,
         "Ejecutivo": 3,
-        "Otro": 10,
         "Desarrollador QA": 5,
         "Project Manager": 5,
         "Académico / Científico": 1,
-        "Diseñador": 3
+        "Diseñador": 3,
+        "Otro": 10
     },
     "empleadosAprox": {
-        "100 a 499 empleados": 17,
+        "1, soy independiente": 13,
         "2 a 19 empleados": 11,
         "20 a 99 empleados": 21,
-        "1, soy independiente": 13,
-        "5,000 empleados o mas": 12,
-        "1,000 a 4,999 empleados": 10,
+        "100 a 499 empleados": 17,
         "500 a 999 empleados": 14,
+        "1,000 a 4,999 empleados": 10,
+        "5,000 empleados o mas": 12,
         "No estoy seguro": 7
     },
     "compensacionMensual": {
@@ -123,9 +123,9 @@
     "frequenciaDeSalario": {
         "Quincenal": 57,
         "Mensual": 34,
-        "Otro": 5,
         "Por proyecto": 8,
-        "Semanal": 1
+        "Semanal": 1,
+        "Otro": 5
     },
     "certs": {
         "AWS": 8,
@@ -138,7 +138,6 @@
         "Cisco": 18,
         "Agile PM / Scrum": 8,
         "Power BI": 2,
-        "Ninguna": 1,
         "Google Cloud": 3,
         "PostgreSQL for Everybody Specialization by university of Michigan ": 1,
         "ITIL": 1,
@@ -150,7 +149,8 @@
         "ISTQB": 1,
         "CompTIA": 1,
         "Windows Server": 1,
-        "Terraform": 1
+        "Terraform": 1,
+        "Ninguna": 1
     },
     "empresaTipo": {
         "Empresa internacional con oficinas en el país ": 37,
@@ -236,11 +236,11 @@
         "IBM Cloud": 4,
         "Azure": 25,
         "Contabo ": 1,
-        "Ninguno": 1,
         "Salesforce ": 1,
         "SAP": 1,
         "Vercel": 1,
-        "Vultr": 1
+        "Vultr": 1,
+        "Ninguno": 1
     },
     "webFrameworks": {
         "Flask": 5,
@@ -275,13 +275,13 @@
         "Xamarin": 3,
         "Oracle": 1,
         "TensorFlow": 5,
-        "Otro": 1,
         "Apache Spark": 2,
         "Hadoop": 1,
         "Torch/PyTorch": 2,
         "Spring Boot": 1,
         "React": 1,
         "Ionic": 1,
+        "Otro": 1,
         "Ninguna": 3
     },
     "devTools": {
@@ -323,10 +323,10 @@
         "Ninguno": 5
     },
     "blockchain": {
-        "Muy Desfavorable": 5,
-        "Indiferente": 27,
         "Muy favorable": 24,
         "Favorable": 30,
+        "Indiferente": 27,
+        "Muy Desfavorable": 5,
         "Desfavorable": 2,
         "No tengo una opinión al respecto ": 14
     },
@@ -345,8 +345,8 @@
         "AI/ML/DL": 4
     },
     "edad": {
-        "25-34 años": 59,
         "18-24 años": 25,
+        "25-34 años": 59,
         "35-44 años": 19,
         "45-55 años": 4
     },
@@ -356,9 +356,9 @@
         "Prefiero no decir": 1
     },
     "callcenter": {
-        "Nunca": 87,
         "Si, por poco tiempo": 13,
-        "Si, por mucho tiempo": 7
+        "Si, por mucho tiempo": 7,
+        "Nunca": 87
     },
     "atributos": {
         "Tengo problemas emocionales": 12,
@@ -384,14 +384,14 @@
         "San Vicente": 2
     },
     "duracion": {
-        "Duración apropiada": 91,
+        "Muy corta": 3,
         "Muy larga": 13,
-        "Muy corta": 3
+        "Duración apropiada": 91
     },
     "dificultad": {
-        "Ni fácil ni difícil": 30,
+        "Difícil": 1,
         "Fácil": 76,
-        "Difícil": 1
+        "Ni fácil ni difícil": 30
     },
     "evaluacion": {
         "5.0": 52,
@@ -400,3 +400,4 @@
         "2.0": 2
     }
 }
+
