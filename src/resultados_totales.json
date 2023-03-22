@@ -11,7 +11,7 @@
         "No soy desarrollador, pero escribo código como parte de mi trabajo": 8,
         "No soy desarrollador, pero soy profesional de tecnología informática ": 11,
         "Estoy aprendiendo a programar": 14,
-        "Estoy aprendiendo sobre tecnológica informática": 2
+        "Estoy aprendiendo sobre tecnología informática": 2
     },
     "modalidadDeTrabajo": {
         "Completamente remoto": 49,
@@ -27,34 +27,26 @@
     },
     "aprendizaje": {
         "Universidad ": 80,
+        "Instituto técnico": 16,
         "Bachillerato": 16,
-        "Curso online": 74,
+        "Bootcamp": 18,
+        "Curso online": 80,
         "Certificación ": 39,
+        "Entrenamiento en el trabajo": 34,
         "Pasantia": 14,
         "Libros": 30,
-        "Entrenamiento en el trabajo": 34,
-        "Instituto técnico": 16,
-        "Bootcamp": 18,
-        "Autodidacta": 1,
-        "Internet": 1,
-        "Tutoriales de YouTube y stack overflow": 1,
-        "Tutoriales en YouTube": 1,
-        "Curso presencial": 1,
-        "Google": 1,
-        "Platzi, Udemy, YouTube ": 1,
-        "Platzi": 1,
-        "Emprendiendo en equipo ": 1
+        "Otro": 3
     },
     "elearning": {
         "Udemy": 77,
         "YouTube": 97,
         "LinkedIn Learning": 13,
-        "Otro": 21,
         "Pluralsight": 12,
         "Codeacademy": 6,
         "Coursera": 22,
         "Platzi": 26,
-        "edX": 9
+        "edX": 9,
+        "Otro": 21
     },
     "experiencia": {
         "1.0": 14,
@@ -80,24 +72,24 @@
         "17.0": 1
     },
     "trabajoTipo": {
+        "Desarrollador full-stack": 41,
+        "Desarrollador back-end": 34,
+        "Desarrollador front-end": 13,
+        "Desarrollador de aplicaciones móviles": 7,
+        "Desarrollador de aplicaciones de escritorio": 7,
+        "Desarrollador de sistemas embebidos": 2,
         "DevOps/SRE": 9,
         "Administrador de sistemas": 11,
         "Administrador de redes": 5,
-        "Desarrollador back-end": 34,
-        "Estudiante": 9,
-        "Desarrollador de aplicaciones mobiles": 7,
-        "Desarrollador full-stack": 41,
-        "Desarrollador de aplicaciones de escritorio": 7,
-        "Desarrollador front-end": 13,
-        "Analista de datos": 10,
         "Administrador de base de datos": 7,
-        "Ingeniero de datos": 3,
-        "Desarrollador de sistemas embebidos": 2,
-        "Ejecutivo": 3,
-        "Desarrollador QA": 5,
         "Project Manager": 5,
-        "Académico / Científico": 1,
         "Diseñador": 3,
+        "Ingeniero de datos": 3,
+        "Analista de datos": 10,
+        "Desarrollador QA": 5,
+        "Académico / Científico": 1,
+        "Estudiante": 9,
+        "Ejecutivo": 3,
         "Otro": 10
     },
     "empleadosAprox": {
@@ -129,101 +121,85 @@
     },
     "certs": {
         "AWS": 8,
+        "Azure": 15,
+        "Google Cloud": 3,
+        "Cisco": 18,
+        "CompTIA": 1,
+        "ITIL": 1,
+        "Agile PM/Scrum": 8,
+        "Cybersecurity": 3,
+
         "Kubernetes": 1,
         "REDHAT": 1,
         "Oracle": 2,
-        "ninguna": 1,
-        "Salesforce": 2,
-        "Azure": 15,
-        "Cisco": 18,
-        "Agile PM / Scrum": 8,
         "Power BI": 2,
-        "Google Cloud": 3,
-        "PostgreSQL for Everybody Specialization by university of Michigan ": 1,
-        "ITIL": 1,
+        "Salesforce": 2,
+        "PostgreSQL": 1,
         "ISTQB FCL": 1,
-        "IBM y DeepLearning.Io": 1,
-        "Cybersecurity": 3,
-        "Pegasystem": 1,
-        "Sólo cursitos de platzi e Udemy ": 1,
         "ISTQB": 1,
-        "CompTIA": 1,
+        "IBM y DeepLearning.Io": 1,
+        "Pegasystem": 1,
         "Windows Server": 1,
-        "Terraform": 1,
-        "Ninguna": 1
+        "Terraform": 1
     },
     "empresaTipo": {
+        "Empresa nacional": 47,
         "Empresa internacional con oficinas en el país ": 37,
         "Empresa totalmente en el exterior": 12,
-        "Empresa consultora, servicios profesionales": 14,
-        "Empresa nacional": 47
+        "Empresa consultora, servicios profesionales": 14
     },
     "lenguajesHablar": {
         "Español": 92,
         "Inglés": 39,
-        "Portugues": 1,
-        "Francés de Québec ": 1
+        "Otro": 2
     },
     "nivelDeIngles": {
-        "Avanzado": 21,
+        "Básico ": 31,
         "Intermedio": 54,
-        "Básico ": 31
+        "Avanzado": 21
+        
     },
     "inglesLearning": {
+        "Universidad ": 17,
+        "Instituto técnico": 9,
+        "Bachillerato o básica": 29,
         "Curso presencial": 47,
-        "Libros": 19,
         "Curso online": 33,
         "Entrenamiento en el trabajo": 9,
+        "Libros": 19,
+        
+        
         "Call center": 1,
-        "Universidad ": 17,
-        "Bachillerato o básica": 29,
-        "Instituto técnico": 9,
         "Autodidácta": 1,
         "Jugando": 1,
         "videojuegos en linea": 1,
         "Beca de estudios": 1,
-        "Autoaprendizaje ": 1,
-        "Autodidacta": 2,
+        "Autodidacta": 3,
+
         "Google": 1,
         "Practica": 1,
         "E4CC": 1
     },
     "lenguajesProgramar": {
-        "Bash/Shell": 6,
-        "JavaScript": 69,
-        "Python": 25,
-        "Java": 43,
-        "PHP": 39,
-        "SQL": 58,
-        "TypeScript": 33,
-        "C++": 4,
-        "HTML/CSS": 53,
-        "Kotlin": 4,
-        "C#": 35,
-        "VBA": 11,
-        "Apex": 1,
         "Assambly": 2,
-        "Swift": 2,
-        "Dart": 1,
-        "Otro": 3,
-        "Plsql": 1,
+        "Bash/Shell": 6,
         "C": 2,
-        "R": 3,
-        "Ruby": 1,
-        "Julia": 1,
-        "MaTLAB": 1,
-        "Rust": 1,
-        "PL/SQL": 1,
+        "C#": 35,
+        "C++": 4,
         "COBOL": 2,
-        "Fortran": 1,
-        "Perl": 1,
-        "VFP 9.0": 1,
-        "Scala": 1,
+        "HTML/CSS": 53,
+        "Java": 43,
+        "JavaScript": 69,
+        "Kotlin": 4,
+        "PHP": 39,
         "PowerShell": 3,
-        "Apps Script ": 1,
-        "Go": 1,
-        "Visual Basic NET": 1,
-        "Ninguno": 1
+        "Python": 25,
+        "R": 3,
+        "SQL": 58,
+        "Swift": 2,
+        "TypeScript": 33,
+        "VBA": 11,
+        "Otro": 3
     },
     "cloud": {
         "AWS": 28,
@@ -239,8 +215,7 @@
         "Salesforce ": 1,
         "SAP": 1,
         "Vercel": 1,
-        "Vultr": 1,
-        "Ninguno": 1
+        "Vultr": 1
     },
     "webFrameworks": {
         "Flask": 5,
@@ -258,12 +233,10 @@
         "jQuery": 21,
         "Oracle": 1,
         "Angular.js": 5,
-        "ninguna": 2,
         "Ruby on Rails": 2,
         "Selenium y RestAssured": 1,
         "Nest.js": 1,
-        "Otro ": 1,
-        "Ninguna": 1
+        "Otro ": 1
     },
     "libs": {
         "Apache Kafka": 9,
@@ -281,8 +254,7 @@
         "Spring Boot": 1,
         "React": 1,
         "Ionic": 1,
-        "Otro": 1,
-        "Ninguna": 3
+        "Otro": 1
     },
     "devTools": {
         "Chef": 1,
@@ -297,8 +269,7 @@
         "Salesforce": 9,
         "Homebrew": 5,
         "Oracle": 1,
-        "Devexpress": 1,
-        "Ninguna ": 2
+        "Devexpress": 1
     },
     "os": {
         "macOS": 20,

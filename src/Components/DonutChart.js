@@ -41,7 +41,6 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
         },
         layout: {
           padding: 15
-        
         },
        
         datalabels: {

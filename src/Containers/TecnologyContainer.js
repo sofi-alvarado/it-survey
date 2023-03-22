@@ -103,6 +103,7 @@ const TecnologyContainer = () => {
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question6}
+                classContainer='chart-container'
             />
             {/* Question 7 */}
                 <ChartComponent
@@ -148,6 +149,7 @@ const TecnologyContainer = () => {
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question10}
+                classContainer='chart-container'
             />
             {/* Question 11 */}
                 <ChartComponent

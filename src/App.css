@@ -148,9 +148,13 @@ nav {
   justify-content: center;
 }
 
+
 .chart-container {
-  max-height: 500px !important;
+  max-height: 600px !important;
+
+  padding-bottom: 0px;
 } 
+
 
 
 .secondary-button:hover {

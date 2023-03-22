@@ -49,6 +49,7 @@ const DemographyContainer = () => {
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question2}
+                classContainer='chart-container'
             />
             {/* Question 3 */}
                 <ChartComponent

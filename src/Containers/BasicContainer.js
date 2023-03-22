@@ -32,6 +32,7 @@ const BasicContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.situacionDeEmpleo}
+                    autoSkipp={false} 
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question1}
@@ -43,6 +44,7 @@ const BasicContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.softwareDev}
+                    autoSkipp={false} 
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question2}
@@ -58,6 +60,7 @@ const BasicContainer = () => {
                     secondColor={secondColor}
                 />}
                 question={text.question3}
+                classContainer='chart-container'
             />
         </>
     )

@@ -43,6 +43,7 @@ const EducationContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.educacion}
+                    autoSkipp={false} 
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question1}
@@ -129,6 +130,7 @@ const EducationContainer = () => {
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question8}
+                classContainer='chart-container'
         />
     {/* Question 9 */}
          <ChartComponent
@@ -152,6 +154,7 @@ const EducationContainer = () => {
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question10}
+                classContainer='chart-container'
         />
     {/* Question 11 */}
          <ChartComponent
@@ -163,6 +166,7 @@ const EducationContainer = () => {
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question11}
+                classContainer='chart-container'
         />
     {/* Question 12 */}
          <ChartComponent
@@ -174,6 +178,7 @@ const EducationContainer = () => {
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question12}
+                classContainer='chart-container'
         />
     {/* Question 13 */}
          <ChartComponent
