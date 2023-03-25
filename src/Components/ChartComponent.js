@@ -19,10 +19,10 @@ const ChartComponent = ({title, chartTitle, chartDescription, chart, question}) 
                             <div className='col'></div>
                 </div>
                 <hr className="hr border border-white border-1" />
-                <div className="chart-container d-flex justify-content-center">
+                <div className="d-flex row justify-content-center">
                    {chart}
                 </div>
-                <div className='my-5 question'><span><RiQuestionnaireFill /> {question}</span></div>
+                <div className='y-5 question'><span><RiQuestionnaireFill /> {question}</span></div>
             </Container>
 
         </>

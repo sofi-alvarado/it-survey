@@ -24,8 +24,13 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
 
   if (chartInfo) {
     let labels = Object.keys(chartInfo);
-    const shortLabels = labels.map(label => label.split(/(?<=^(?:.{15})+)(?!$)/));
-    //console.log(shortLabels)
+  
+
+    const backgroundOne = (ctx, chartArea) => {
+      const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+      gradientBg.addColorStop(0, firstColor);
+      return gradientBg;
+    }
 
     function getGradient(ctx, chartArea) {
       const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
@@ -42,24 +47,24 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
         {
           label: 'Cantidad de respuestas',
           data: labels.map((item) => chartInfo[item]),
-          backgroundColor: (context) => {
+          /*backgroundColor: (context) => {
             const chart = context.chart;
             const { ctx, chartArea, scales } = chart;
             if(!chartArea) {
               return null
             };
             return getGradient(ctx, chartArea, scales)
-          }, 
-          /*backgroundColor: [
+          }, */
+          backgroundColor: [
             '#2c52b2',
             '#f8aa14',
             '#9d3030',
             '#1ab032',
             '#ee8f59',
-          ],*/
+          ],
           borderRadius: 8,
           borderSkipped: false,
-          barPercentage: 0.7,
+          barPercentage: 0.6,
           categoryPercentage: 0.7,
         }
       ],
@@ -77,15 +82,15 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
             display: false,
           },
           ticks: {
-            display: true,
-            //mirror: true,
-            //labelOffset: -12,
+            display: function(context) {
+              return context.chart.width > 1200;
+            },
             autoSkip: autoSkipp,
             color: 'white',
             align: 'center',
             font: {
-            family: 'Roboto',
-            //size: 10
+              family: 'Roboto',
+              size: 15
             },
           },
         },
@@ -105,41 +110,14 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
       responsive: true,
       layout: {
         padding: {
-          right: 5
+          right: 50,
+          top: 10
         }
       },
       maintainAspectRatio: true,
       plugins: {
         legend: {
           display: false,
-          /*position: 'top',
-          onClick: (evt, legendItem, legend) => {
-            const index = legend.chart.data.labels.indexOf(legendItem.text);
-            legend.chart.toggleDataVisibility(index);
-            legend.chart.getDataVisibility(index);
-            legend.chart.update();
-          },*/
-          labels: {
-            /*color: 'white',
-            generateLabels: (chart) => {
-              let visibility = [];
-              for (let i = 0; i < chart.data.labels.length; i++) {
-                if (chart.getDataVisibility(i) === true) {
-                  visibility.push(false)
-                } else {
-                  visibility.push(true)
-                }
-              };
-
-              return chart.data.labels.map(
-                (label, index) => ({
-                  text: label,
-                  strokeStyle: chart.data.datasets[0].backgroundColor[index],
-                  fillStyle: chart.data.datasets[0].backgroundColor[index],
-                  hidden: visibility[index],
-                }))
-            } */
-          }
         },
         title: {
           display: false,
@@ -152,23 +130,42 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
             const percentage = value / total * 100
             return percentage.toFixed(2) + "%";
           },
-          anchor: 'end',
+        anchor: 'end',
           align: 'right',
-          color: 'white',
-          font: {
-            weight: 'bold'
-          },
-        },
+            color: 'white',
+              font: {
+        weight: 'bold',
+          size: 12
       },
+    },
+  },
 
-    };
+};
 
-    return <Bar data={data} options={options} />;
+const legendData = Object.entries(data.datasets[0].data).map(([label, value], i) => ({
+  label: data.labels[i],
+  value,
+  color: data.datasets[0].backgroundColor[i],
+}));
+
+return (
+  <>
+    <Bar data={data} options={options} style={{ minHeight: '300px', minWidth: '350px'}} />
+    <div className='hide-on-desktop m-4'>
+      {legendData.map(({ label, color }) => (
+        <div key={label} className='d-flex '>
+          <div className='p-0' style={{ backgroundColor: color, width: 15, height: 15, marginRight: 10 }}></div>
+          <div className='white-font'>{label}</div>
+        </div>
+      ))}
+    </div>
+  </>
+);
   } else {
-    return (<>
-      <div><h1>404</h1></div>
-    </>)
-  }
+  return (<>
+    <div><h1>404</h1></div>
+  </>)
+}
 }
 
 export default BarChart;

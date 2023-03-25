@@ -61,7 +61,7 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
     }
 
 
-    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} />;
+    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} style={{maxHeight: '600px'}} />;
   } else {
     return (<>
       <div><h1>404</h1></div>
