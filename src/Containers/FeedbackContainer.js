@@ -3,6 +3,7 @@ import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
 import myData from "../resultados_totales.json";
 import ChartComponent from '../Components/ChartComponent';
+import DonutChart from '../Components/DonutChart';
 
 const FeedbackContainer = () => {
     const firstColor='#da6008';
@@ -41,9 +42,8 @@ const FeedbackContainer = () => {
                 title={text.title}
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
-                chart={<BarChart
+                chart={<DonutChart
                     chartInfo={myData.dificultad}
-                    autoSkipp={false} 
                     firstColor={firstColor}
                     secondColor={secondColor} />}
                 question={text.question2}

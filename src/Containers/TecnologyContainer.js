@@ -6,9 +6,6 @@ import myData from "../resultados_totales.json";
 import ChartComponent from '../Components/ChartComponent';
 
 const TecnologyContainer = () => {
-    const firstColor='#9d3030';
-    const secondColor='#e35050';
-
     const text = {
       title: 'Tecnología y Cultura',
       chartTitle: 'Chart Title',
@@ -40,9 +37,7 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.lenguajesProgramar}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question1}
             />
             {/* Question 2 */}
@@ -52,9 +47,7 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.cloud}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question2}
             />
             {/* Question 3 */}
@@ -64,9 +57,7 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.webFrameworks}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question3}
             />
             {/* Question 4 */}
@@ -76,9 +67,7 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.libs}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question4}
             />
             {/* Question 5 */}
@@ -88,9 +77,7 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.devTools}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question5}
             />
             {/* Question 6 */}
@@ -98,10 +85,7 @@ const TecnologyContainer = () => {
                 title={text.title}
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
-                chart={<DonutChart
-                    chartInfo={myData.os}
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                chart={<DonutChart chartInfo={myData.os}/>}
                 question={text.question6}
                 classContainer='chart-container'
             />
@@ -110,10 +94,7 @@ const TecnologyContainer = () => {
                 title={text.title}
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
-                chart={<BarChart
-                    chartInfo={myData.git}
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                chart={<DonutChart chartInfo={myData.git} />}
                 question={text.question7}
             />
             {/* Question 8 */}
@@ -122,9 +103,7 @@ const TecnologyContainer = () => {
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
                 chart={<BarChart
-                    chartInfo={myData.versionControl}
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    chartInfo={myData.versionControl} />}
                 question={text.question8}
             />
             {/* Question 9 */}
@@ -134,9 +113,7 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.blockchain}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false}  />}
                 question={text.question9}
             />
             {/* Question 10 */}
@@ -145,9 +122,7 @@ const TecnologyContainer = () => {
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
                 chart={<DonutChart
-                    chartInfo={myData.infosec}
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    chartInfo={myData.infosec} />}
                 question={text.question10}
                 classContainer='chart-container'
             />
@@ -158,9 +133,7 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.implementaciones}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question11}
             />
         </>

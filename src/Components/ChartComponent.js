@@ -22,7 +22,7 @@ const ChartComponent = ({title, chartTitle, chartDescription, chart, question}) 
                 <div className="d-flex row justify-content-center">
                    {chart}
                 </div>
-                <div className='y-5 question'><span><RiQuestionnaireFill /> {question}</span></div>
+                <div className='my-5 question'><span><RiQuestionnaireFill /> {question}</span></div>
             </Container>
 
         </>

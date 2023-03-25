@@ -33,18 +33,16 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
     };
 
     const options = {
-      
+      layout: {
+        padding: 15
+      },
       plugins: {
         legend: {
           position: 'bottom',
           labels: {
-            color: 'black'
+            color: '#313030'
           },
         },
-        layout: {
-          padding: 15
-        },
-       
         datalabels: {
           formatter: (value, ctx) => {
             const datapoints = ctx.chart.data.datasets[0].data

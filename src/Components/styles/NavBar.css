@@ -1,5 +1,5 @@
 .offcanvas{
-    --bs-offcanvas-bg: #111c32f5 !important;
+    --bs-offcanvas-bg: #aab1da !important;
     --bs-offcanvas-padding-x: 3rem !important;
     --bs-offcanvas-padding-y: 0.8rem !important;
     opacity: 1.0;
@@ -13,7 +13,7 @@
   }
 
 .navbar-nav {
-    --bs-nav-link-hover-color: #33A7FF !important;
+    --bs-nav-link-hover-color: #597096 !important;
     font-size: 1.31538rem;
     font-weight: 700;
     font-family: 'Roboto' sans-serif;
@@ -30,6 +30,7 @@
 
 .navbar-toggler { 
     --bs-navbar-toggler-icon-bg: url("../../assets/menu.png");
+  
 }
 
 .navbar-toggler:hover { 

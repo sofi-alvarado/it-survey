@@ -1,11 +1,11 @@
 .general-card {
-    background: linear-gradient(90deg, rgba(85,114,171,1) 0%, rgba(133,169,238,1) 100%);
+    background-color: #113f67 !important;
     color: white;
 }
 
 .basic-info-card {
-    background: linear-gradient(135deg,#f8aa14 2%,#f9d98c 98%);
-    color: black;
+    background-color: #597096 !important;
+    color: white;
 }
 
 .basic-info-card > h1 {
@@ -13,21 +13,21 @@
 }
 
 .education-card {
-    background: linear-gradient(135deg,#2c52b2 2%,#5d88f3 98%);
+    background-color: #97a6c7 !important;
     color: white;
 }
 
 .tecnology-card {
-    background: linear-gradient(135deg,#9d3030 2%,#e35050 98%);
+    background-color: #b3bae0!important;
     color: white;
 }
 
 .demography-card {
-    background: linear-gradient(135deg,#0b8f20 2%,#1ab032 98%);
+    background-color: #a2a8d3!important;
     color: white;
 }
 
 .feedback-card {
-    background: linear-gradient(135deg,#da6008 2%,#ee8f59 98%);;
+    background-color:  #bfb7dd !important;
     color: white;
 }

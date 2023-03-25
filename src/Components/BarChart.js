@@ -68,12 +68,25 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
             '#bbc3e6',
             '#b3bae0',
             '#aab1da',
-            '#a2a8d3'
+            '#a2a8d3',
+            '#b1afd8',
+            '#bfb7dd',
+            '#ccbfe1',
+            '#d8c8e6',
+            '#e3d0eb',
+            '#eed9f0',
+            '#e8c4e4',
+            '#e3afd6',
+            '#e099c6',
+            '#dc82b3',
+            '#d96a9e',
+            '#d45087',
           ],
           borderRadius: 8,
           borderSkipped: false,
-          barPercentage: 0.6,
-          categoryPercentage: 0.7,
+          barPercentage: 1.0,
+          categoryPercentage: 0.9,
+       
         }
       ],
     };
@@ -83,6 +96,7 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
       indexAxis: 'y',
       scales: {
         y: {
+          
           grid: {
             display: false,
           },
