@@ -55,7 +55,7 @@ nav {
 
 /*Charts Header Styling */
 .white {
-  color: white !important
+  color: black !important
 }
 .title {
   color: #8c95a8
@@ -118,7 +118,7 @@ nav {
 .primary-heading {
   font-size: clamp(2rem, 5vw, 3.5rem);
   /* line-height: 5rem; */
-  color: white !important;
+  color: black !important;
 }
 
 .white-font {

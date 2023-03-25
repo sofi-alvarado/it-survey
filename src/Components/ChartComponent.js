@@ -9,7 +9,7 @@ const ChartComponent = ({title, chartTitle, chartDescription, chart, question}) 
         <>
     {/* Question 1 */}
             <Container className='primary-text'>
-                <hr className="hr border border-white border-3" />
+                <hr className="hr border border-grey border-3" />
                 <div className='row d-flex'>
                     <p className='title title-size'>{title}</p>
                         <h2 className='white chart-title-size'>{chartTitle}</h2>
@@ -18,7 +18,7 @@ const ChartComponent = ({title, chartTitle, chartDescription, chart, question}) 
                             </div>
                             <div className='col'></div>
                 </div>
-                <hr className="hr border border-white border-1" />
+                <hr className="hr border border-grey border-1" />
                 <div className="d-flex row justify-content-center">
                    {chart}
                 </div>

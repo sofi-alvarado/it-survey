@@ -86,7 +86,7 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
               return context.chart.width > 1200;
             },
             autoSkip: autoSkipp,
-            color: 'white',
+            color: 'black',
             align: 'center',
             font: {
               family: 'Roboto',
@@ -132,7 +132,7 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
           },
         anchor: 'end',
           align: 'right',
-            color: 'white',
+            color: 'grey',
               font: {
         weight: 'bold',
           size: 12
@@ -155,7 +155,7 @@ return (
       {legendData.map(({ label, color }) => (
         <div key={label} className='d-flex '>
           <div className='p-0' style={{ backgroundColor: color, width: 15, height: 15, marginRight: 10 }}></div>
-          <div className='white-font'>{label}</div>
+          <div className=''>{label}</div>
         </div>
       ))}
     </div>

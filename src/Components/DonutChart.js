@@ -36,7 +36,7 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
         legend: {
           position: 'bottom',
           labels: {
-            color: 'white'
+            color: 'black'
           },
         },
         layout: {
