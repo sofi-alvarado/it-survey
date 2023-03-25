@@ -56,11 +56,19 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
             return getGradient(ctx, chartArea, scales)
           }, */
           backgroundColor: [
-            '#2c52b2',
-            '#f8aa14',
-            '#9d3030',
-            '#1ab032',
-            '#ee8f59',
+            '#113f67',
+            '#39577e',
+            '#597096',
+            '#788aae',
+            '#97a6c7',
+            '#b7c2e0',
+            '#d7dffa',
+            '#cdd6f3',
+            '#c4cded',
+            '#bbc3e6',
+            '#b3bae0',
+            '#aab1da',
+            '#a2a8d3'
           ],
           borderRadius: 8,
           borderSkipped: false,
@@ -155,7 +163,7 @@ return (
       {legendData.map(({ label, color }) => (
         <div key={label} className='d-flex '>
           <div className='p-0' style={{ backgroundColor: color, width: 15, height: 15, marginRight: 10 }}></div>
-          <div className=''>{label}</div>
+          <div className='black-font'>{label}</div>
         </div>
       ))}
     </div>

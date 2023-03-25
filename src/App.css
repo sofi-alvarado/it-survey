@@ -58,7 +58,7 @@ nav {
   color: black !important
 }
 .title {
-  color: #8c95a8
+  color: #97a6c7 !important;
 }
 
 .title-size {
@@ -68,11 +68,20 @@ nav {
 .chart-title-size {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: bold;
+  color: #113f67 !important;
 }
 
 .question {
   color: #8c95a8;
   font-size: 0.8rem;
+}
+
+.divider {
+  --bs-border-color: #0e2c46 !important;
+}
+
+.black-font {
+  color: #313030 !important
 }
 
 .primary-button {
@@ -118,7 +127,7 @@ nav {
 .primary-heading {
   font-size: clamp(2rem, 5vw, 3.5rem);
   /* line-height: 5rem; */
-  color: black !important;
+  color: #113f67 !important;
 }
 
 .white-font {
@@ -129,7 +138,7 @@ nav {
 }
 
 .primary-text {
-  color: #cdcdcd;
+  color: #313030;
 }
 
 .secondary-button {

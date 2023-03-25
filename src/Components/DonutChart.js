@@ -18,11 +18,13 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
           label: 'Cantidad de respuestas',
           data: labels.map((item) => chartInfo[item]),
           backgroundColor: [
-            '#2c52b2',
-            '#f8aa14',
-            '#9d3030',
-            '#1ab032',
-            '#ee8f59',
+            '#113f67',
+            '#597096',
+            '#97a6c7',
+            '#d7dffa',
+            '#c4cded',
+            '#b3bae0',
+            '#a2a8d3'
           ],
           borderWidth: 0,
           hoverOffset: 15
