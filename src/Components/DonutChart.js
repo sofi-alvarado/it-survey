@@ -51,7 +51,9 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
             return percentage.toFixed(0) + "%";
           },
           display: true,
-          color: "white",
+          color: 'white',
+          textStrokeColor: 'grey', // <-- added this
+          textStrokeWidth: 4,
           font: {
             weight: 'bold'
           },

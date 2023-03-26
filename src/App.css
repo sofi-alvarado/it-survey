@@ -141,6 +141,15 @@ nav {
   color: #313030;
 }
 
+.label-size {
+  font-size: large;
+}
+
+.value-bold {
+  font-weight: bold;
+  color: black;
+}
+
 .secondary-button {
   padding: 1rem 2.5rem;
   background-color:  #aab1da;
@@ -160,7 +169,7 @@ nav {
 
 .secondary-button:hover {
   background-color:  #aab1dace;
-  color: white;
+  color: #113f67;
 }
 
 @media (max-width: 800px) {
@@ -208,8 +217,31 @@ nav {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .hide-on-desktop {
-    display: none;
+@media screen and (max-width: 1200px) {
+  .on-mobile {
+    flex-direction: column-reverse;
+  } 
+  .label-size {
+    font-size: small;
+  } 
+  .labels {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .labels-container {
+    width: 100% !important;
+    margin: 10px;
+  }
+  .value {
+    margin-left: 5px !important;
+   
+  }
+  .chart-container {
+    width: 100% !important;
+   
+  }
+  .chart {
+    min-height: 300px !important;
   }
 }
+

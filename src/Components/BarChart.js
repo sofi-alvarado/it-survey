@@ -94,38 +94,47 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
 
     const options = {
       indexAxis: 'y',
+      
       scales: {
         y: {
           
           grid: {
-            display: false,
+            display: true,
           },
           border: {
-            display: false,
+            display: true,
           },
           ticks: {
-            display: function(context) {
+            display: false,
+            /*display: function(context) {
               return context.chart.width > 1200;
-            },
+            },*/
             autoSkip: autoSkipp,
             color: 'black',
             align: 'center',
-            font: {
-              family: 'Roboto',
-              size: 15
-            },
+            
           },
         },
         x: {
           beginAtZero: true,
           grid: {
-            display: false,
+            display: true,
           },
           border: {
             display: false,
           },
           ticks: {
-            display: false,
+            display: true,
+            color: 'gray',
+            font: function (context) {
+              var avgSize = Math.round((context.chart.height + context.chart.width) / 2);
+              var size = Math.round(avgSize / 32);
+              size = size > 12 ? 12 : size; // setting max limit to 12
+              return {
+                  size: size,
+                  weight: 'bold'
+              };
+          },
           }
         }
       },
@@ -136,6 +145,7 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
           top: 10
         }
       },
+      
       maintainAspectRatio: true,
       plugins: {
         legend: {
@@ -146,19 +156,28 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
         },
 
         datalabels: {
+          
           formatter: (value, ctx) => {
             const datapoints = ctx.chart.data.datasets[0].data
             const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
             const percentage = value / total * 100
-            return percentage.toFixed(2) + "%";
-          },
-        anchor: 'end',
+            return percentage.toFixed(1) + "%";
+          }, 
+        anchor: 'top',
           align: 'right',
-            color: 'grey',
-              font: {
-        weight: 'bold',
-          size: 12
-      },
+            color: 'white',
+            textStrokeColor: 'grey',
+            textStrokeWidth: 3,
+            font: function (context) {
+              var avgSize = Math.round((context.chart.height + context.chart.width) / 2);
+              var size = Math.round(avgSize / 32);
+              size = size > 12 ? 12 : size; // setting max limit to 12
+              return {
+                  size: size,
+                  weight: 'bold'
+              };
+          },
+   
     },
   },
 
@@ -172,15 +191,29 @@ const legendData = Object.entries(data.datasets[0].data).map(([label, value], i)
 
 return (
   <>
-    <Bar data={data} options={options} style={{ minHeight: '300px', minWidth: '350px'}} />
-    <div className='hide-on-desktop m-4'>
-      {legendData.map(({ label, color }) => (
-        <div key={label} className='d-flex '>
-          <div className='p-0' style={{ backgroundColor: color, width: 15, height: 15, marginRight: 10 }}></div>
-          <div className='black-font'>{label}</div>
-        </div>
-      ))}
+    <div className='d-flex on-mobile'>
+      <div className='labels-container label-size' style={{ width: '35%', marginTop: '10px'}}>
+        <table>
+          <tbody>
+            {legendData.map(({ label, value, color }) => (
+              <tr key={label}>
+                <td>
+                  <div className='d-flex'>
+                    <div style={{ backgroundColor: color, width: 20, height: 20, marginRight: 10 }}> </div>
+                    <div className='labels' style={{maxWidth: '300px'}}>{label}</div>
+                  </div>
+                </td>
+                <td className='value-bold'> <div className='value text-center' style={{ marginLeft: 20 }}>{value}</div></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <div className='chart-container align-items-center' style={{ width: '65%' }}>
+        <Bar data={data} options={options} className='chart' />
+      </div>
     </div>
+
   </>
 );
   } else {
