@@ -2,13 +2,10 @@ import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
-import myData from "../resultados_totales.json";
+import myData from '../resultados_totales.json';
 import ChartComponent from '../Components/ChartComponent';
 
 const DemographyContainer = () => {
-    const firstColor='#0b8f20';
-    const secondColor='#1ab032';
-
     const text = {
         title: 'Demografía',
         chartTitle: 'Chart Title',
@@ -34,9 +31,7 @@ const DemographyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.edad}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question1}
             />
             {/* Question 2 */}
@@ -45,11 +40,8 @@ const DemographyContainer = () => {
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
                 chart={<DonutChart
-                    chartInfo={myData.genero}
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    chartInfo={myData.genero} />}
                 question={text.question2}
-                classContainer='chart-container'
             />
             {/* Question 3 */}
                 <ChartComponent
@@ -58,9 +50,7 @@ const DemographyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.callcenter}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question3}
             />
             {/* Question 4 */}
@@ -70,9 +60,7 @@ const DemographyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.atributos}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question4}
             />
             {/* Question 5 */}
@@ -82,14 +70,12 @@ const DemographyContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.departamento}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question5}
             />
         </>
 
-    )
+    );
 }
 
 export default DemographyContainer;
