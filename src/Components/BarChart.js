@@ -120,11 +120,10 @@ const BarChart = ({chartInfo, autoSkipp}) => {
             display: false,
           },
           datalabels: {
-            formatter: (value, ctx) => {
-              const datapoints = ctx.chart.data.datasets[0].data
-              const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
+            formatter: (value) => {
+              const total = 108
               const percentage = value / total * 100
-              return percentage.toFixed(1) + '%';
+              return percentage.toFixed(0) + '%';
             }, 
             anchor: 'top',
             align: 'right',
