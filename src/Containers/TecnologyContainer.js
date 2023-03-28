@@ -2,7 +2,7 @@ import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
-import myData from "../resultados_totales.json";
+import myData from '../resultados_totales.json';
 import ChartComponent from '../Components/ChartComponent';
 
 const TecnologyContainer = () => {
@@ -21,7 +21,7 @@ const TecnologyContainer = () => {
       question9: '¿Cómo es tu opinión sobre blockchain, crypto y Web3?',
       question10: '¿Tienes alguna educación o entrenamiento en seguridad informática?',
       question11: '¿Cuál de las siguientes opciones es implementada donde trabajas?',
-  }
+    }
   
     return (
         <>
@@ -87,7 +87,6 @@ const TecnologyContainer = () => {
                 chartDescription={text.text}
                 chart={<DonutChart chartInfo={myData.os}/>}
                 question={text.question6}
-                classContainer='chart-container'
             />
             {/* Question 7 */}
                 <ChartComponent
@@ -124,7 +123,6 @@ const TecnologyContainer = () => {
                 chart={<DonutChart
                     chartInfo={myData.infosec} />}
                 question={text.question10}
-                classContainer='chart-container'
             />
             {/* Question 11 */}
                 <ChartComponent
@@ -137,7 +135,7 @@ const TecnologyContainer = () => {
                 question={text.question11}
             />
         </>
-    )
+    );
 }
 
 export default TecnologyContainer;

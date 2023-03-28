@@ -3,31 +3,25 @@
     color: white;
     margin-top: 0px !important;
 }
-
 .basic-info-card {
     background-color: #597096 !important;
     color: white;
 }
-
 .basic-info-card > h1 {
     font-weight: bold;
 }
-
 .education-card {
     background-color: #97a6c7 !important;
     color: white;
 }
-
 .tecnology-card {
     background-color: #b3bae0!important;
     color: white;
 }
-
 .demography-card {
     background-color: #a2a8d3!important;
     color: white;
 }
-
 .feedback-card {
     background-color:  #bfb7dd !important;
     color: white;

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import Container from 'react-bootstrap/Container';
-import "../Components/styles/Cards.css"
+import '../Components/styles/Cards.css';
 
 const CardItem = ({id, className = '', title}) => {
     return (
@@ -11,13 +11,13 @@ const CardItem = ({id, className = '', title}) => {
                         <Card className={`my-5 mx-auto h-100 ${className}`} style={{ borderRadius: '1rem', border: 'none' }}>
                             <Card.Body className='p-5 w-100 d-flex flex-column font-size'>
                                 <Card.Title className='text-start'><h1>{title}</h1></Card.Title>
-                                <Card.Text className="text-justify mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt. Accumsan sit amet nulla facilisi. Sit amet mauris commodo quis imperdiet massa. Imperdiet massa tincidunt nunc pulvinar sapien et. Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Lacus luctus accumsan tortor posuere ac ut consequat semper. V</Card.Text>
+                                <Card.Text className='text-justify mb-3'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt. Accumsan sit amet nulla facilisi. Sit amet mauris commodo quis imperdiet massa. Imperdiet massa tincidunt nunc pulvinar sapien et. Pharetra diam sit amet nisl suscipit adipiscing bibendum est. Lacus luctus accumsan tortor posuere ac ut consequat semper. V</Card.Text>
                             </Card.Body>
                         </Card>
                     </div>
                 </div>
             </Container>
-    )
+    );
 }
 
 export default CardItem;

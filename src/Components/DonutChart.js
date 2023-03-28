@@ -5,9 +5,7 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
-
-
+const DonutChart = ({ chartInfo }) => {
   if (chartInfo) {
     let labels = Object.keys(chartInfo);
 
@@ -30,7 +28,7 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
           hoverOffset: 15
         },
       ],
-    };
+    } //End of data
 
     const options = {
       layout: {
@@ -48,26 +46,22 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
             const datapoints = ctx.chart.data.datasets[0].data
             const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
             const percentage = value / total * 100
-            return percentage.toFixed(0) + "%";
+            return percentage.toFixed(0) + '%';
           },
           display: true,
           color: 'white',
-          textStrokeColor: 'grey', // <-- added this
+          textStrokeColor: 'grey',
           textStrokeWidth: 4,
           font: {
             weight: 'bold'
           },
         }
       }
-      
-    }
-
-
-    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} style={{maxHeight: '600px'}} />;
+    } // End of options
+  
+    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} style={{maxHeight: '600px'}}/>;
   } else {
-    return (<>
-      <div><h1>404</h1></div>
-    </>)
+    return (<div><h1>404</h1></div>);
   }
 }
 

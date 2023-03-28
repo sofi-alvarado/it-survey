@@ -1,14 +1,11 @@
 import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
-import myData from "../resultados_totales.json";
+import myData from '../resultados_totales.json';
 import ChartComponent from '../Components/ChartComponent';
 import DonutChart from '../Components/DonutChart';
 
 const FeedbackContainer = () => {
-    const firstColor='#da6008';
-    const secondColor='#ee8f59 ';
-
     const text = {
         title: 'Feedback',
         chartTitle: 'Chart Title',
@@ -32,9 +29,7 @@ const FeedbackContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.duracion}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question1}
             />
         {/* Question 2 */}
@@ -43,9 +38,7 @@ const FeedbackContainer = () => {
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
                 chart={<DonutChart
-                    chartInfo={myData.dificultad}
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    chartInfo={myData.dificultad} />}
                 question={text.question2}
             />
         {/* Question 3 */}
@@ -55,14 +48,11 @@ const FeedbackContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.evaluacion}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question3}
             />
         </>
-
-    )
+    );
 }
 
 export default FeedbackContainer;

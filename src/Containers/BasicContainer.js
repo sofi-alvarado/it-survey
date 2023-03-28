@@ -2,13 +2,10 @@ import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
-import myData from "../resultados_totales.json";
+import myData from '../resultados_totales.json';
 import ChartComponent from '../Components/ChartComponent';
 
 const BasicContainer = () => {
-    const firstColor = '#f8aa14';
-    const secondColor = '#f9d98c';
-
     const text = {
         title: 'Información Básica',
         chartTitle: 'Chart Title',
@@ -32,9 +29,7 @@ const BasicContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.situacionDeEmpleo}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question1}
             />
         {/* Question 2 */}
@@ -44,9 +39,7 @@ const BasicContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.softwareDev}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question2}
             />
         {/* Question 3 */}
@@ -55,15 +48,11 @@ const BasicContainer = () => {
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
                 chart={<DonutChart
-                    chartInfo={myData.modalidadDeTrabajo}
-                    firstColor={firstColor}
-                    secondColor={secondColor}
-                />}
+                    chartInfo={myData.modalidadDeTrabajo} />}
                 question={text.question3}
-                classContainer='chart-container'
             />
         </>
-    )
+    );
 }
 
 export default BasicContainer;

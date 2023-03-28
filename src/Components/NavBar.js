@@ -3,26 +3,22 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { Link } from "react-scroll";
-import { BsGithub } from "react-icons/bs";
-
+import { Link } from 'react-scroll';
 import './styles/NavBar.css';
+
 const NavBar = () => {
     const [show, setShow] = useState(false);
     const toggleOffCanvas = () => {
         setShow((show) => !show);
     };
 
-
     return (
         <>
             {[false].map((expand) => (
-                <Navbar key={expand} expand={expand} className="animate mt-0 mb-3 fixed-top"
-                    id="navbar-container">
+                <Navbar key={expand} expand={expand} className='animate mt-0 mb-3 fixed-top' id='navbar-container'>
                     <Container fluid>
-                        <Navbar.Brand href="#"></Navbar.Brand>
-                        <Navbar.Toggle onClick={toggleOffCanvas} aria-controls={`offcanvasNavbar-expand-${expand}`} className="border-0" />
-
+                        <Navbar.Brand href='#'></Navbar.Brand>
+                        <Navbar.Toggle onClick={toggleOffCanvas} aria-controls={`offcanvasNavbar-expand-${expand}`} className='border-0' />
                         <Navbar.Offcanvas
                             show={show}
                             onHide={toggleOffCanvas}
@@ -30,17 +26,17 @@ const NavBar = () => {
                             backdrop={true}
                             id={`offcanvasNavbar-expand-${expand}`}
                             aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                            placement="end">
-                            <Offcanvas.Header closeButton closeVariant="white">
+                            placement='end'>
+                            <Offcanvas.Header closeButton closeVariant='white'>
                                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                                 </Offcanvas.Title>
                             </Offcanvas.Header>
                             <Offcanvas.Body>
-                                <Nav className="d-block ms-auto">
+                                <Nav className='d-block ms-auto'>
                                     <Link
                                         onClick={toggleOffCanvas}
-                                        className="nav-link"
-                                        to="general"
+                                        className='nav-link'
+                                        to='general'
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>
@@ -48,8 +44,8 @@ const NavBar = () => {
                                     </Link>
                                     <Link
                                         onClick={toggleOffCanvas}
-                                        className="nav-link"
-                                        to="basic-info"
+                                        className='nav-link'
+                                        to='basic-info'
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>
@@ -57,8 +53,8 @@ const NavBar = () => {
                                     </Link>
                                     <Link
                                         onClick={toggleOffCanvas}
-                                        className="nav-link"
-                                        to="education-info"
+                                        className='nav-link'
+                                        to='education-info'
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>
@@ -66,8 +62,8 @@ const NavBar = () => {
                                     </Link>
                                     <Link
                                         onClick={toggleOffCanvas}
-                                        className="nav-link"
-                                        to="tecnology"
+                                        className='nav-link'
+                                        to='tecnology'
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>
@@ -75,8 +71,8 @@ const NavBar = () => {
                                     </Link>
                                     <Link
                                         onClick={toggleOffCanvas}
-                                        className="nav-link"
-                                        to="demography"
+                                        className='nav-link'
+                                        to='demography'
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>
@@ -84,8 +80,8 @@ const NavBar = () => {
                                     </Link>
                                     <Link
                                         onClick={toggleOffCanvas}
-                                        className="nav-link"
-                                        to="feedback"
+                                        className='nav-link'
+                                        to='feedback'
                                         spy={true}
                                         smooth={true}
                                         offset={-60}>

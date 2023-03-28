@@ -8,7 +8,7 @@ const GeneralContainer = () => {
                 className='general-card' 
                 title='General'
                 />
-    )
+    );
 }
 
 export default GeneralContainer;
