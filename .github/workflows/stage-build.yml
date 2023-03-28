@@ -11,7 +11,7 @@ jobs:
   s3_deployment:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@stage
+      - uses: actions/checkout@master
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
