@@ -15,7 +15,7 @@ const FeedbackContainer = () => {
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.',
         question1: '¿Cómo sientes que fue la duración de esta encuesta?',
         question2: '¿Qué tan difícil fue completar esta encuesta?',
-        question3: '¿Con cuantas estrellas evaluarías esta encuesta?',
+        question3: '¿Con cuántas estrellas evaluarías esta encuesta?',
     }
 
     return (

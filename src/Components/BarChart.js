@@ -20,41 +20,16 @@ ChartJS.register(
   Legend, ChartDataLabels
 );
 
-const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
+const BarChart = ({ chartInfo, autoSkipp}) => {
 
   if (chartInfo) {
     let labels = Object.keys(chartInfo);
-  
-
-    const backgroundOne = (ctx, chartArea) => {
-      const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
-      gradientBg.addColorStop(0, firstColor);
-      return gradientBg;
-    }
-
-    function getGradient(ctx, chartArea) {
-      const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
-      gradientBg.addColorStop(0, firstColor);
-      gradientBg.addColorStop(0, firstColor);
-      gradientBg.addColorStop(0.5, secondColor);
-      gradientBg.addColorStop(1, secondColor);
-      return gradientBg;
-    }
-
     const data = {
       labels,
       datasets: [
         {
           label: 'Cantidad de respuestas',
           data: labels.map((item) => chartInfo[item]),
-          /*backgroundColor: (context) => {
-            const chart = context.chart;
-            const { ctx, chartArea, scales } = chart;
-            if(!chartArea) {
-              return null
-            };
-            return getGradient(ctx, chartArea, scales)
-          }, */
           backgroundColor: [
             '#113f67',
             '#39577e',
@@ -94,10 +69,8 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
 
     const options = {
       indexAxis: 'y',
-      
       scales: {
         y: {
-          
           grid: {
             display: true,
           },
@@ -106,13 +79,9 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
           },
           ticks: {
             display: false,
-            /*display: function(context) {
-              return context.chart.width > 1200;
-            },*/
             autoSkip: autoSkipp,
             color: 'black',
-            align: 'center',
-            
+            align: 'center'
           },
         },
         x: {
@@ -138,6 +107,7 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
           }
         }
       },
+
       responsive: true,
       layout: {
         padding: {
@@ -145,8 +115,8 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
           top: 10
         }
       },
-      
       maintainAspectRatio: true,
+
       plugins: {
         legend: {
           display: false,
@@ -154,20 +124,18 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
         title: {
           display: false,
         },
-
         datalabels: {
-          
           formatter: (value, ctx) => {
             const datapoints = ctx.chart.data.datasets[0].data
             const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
             const percentage = value / total * 100
             return percentage.toFixed(1) + "%";
           }, 
-        anchor: 'top',
+          anchor: 'top',
           align: 'right',
-            color: 'white',
-            textStrokeColor: 'grey',
-            textStrokeWidth: 3,
+          color: 'white',
+          textStrokeColor: 'grey',
+          textStrokeWidth: 2,
             font: function (context) {
               var avgSize = Math.round((context.chart.height + context.chart.width) / 2);
               var size = Math.round(avgSize / 32);
@@ -177,10 +145,8 @@ const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
                   weight: 'bold'
               };
           },
-   
     },
   },
-
 };
 
 const legendData = Object.entries(data.datasets[0].data).map(([label, value], i) => ({
@@ -190,7 +156,6 @@ const legendData = Object.entries(data.datasets[0].data).map(([label, value], i)
 }));
 
 return (
-  <>
     <div className='d-flex on-mobile'>
       <div className='labels-container label-size' style={{ width: '35%', marginTop: '10px'}}>
         <table>
@@ -198,12 +163,12 @@ return (
             {legendData.map(({ label, value, color }) => (
               <tr key={label}>
                 <td>
-                  <div className='d-flex'>
-                    <div style={{ backgroundColor: color, width: 20, height: 20, marginRight: 10 }}> </div>
-                    <div className='labels' style={{maxWidth: '300px'}}>{label}</div>
+                  <div className='d-flex labels'>
+                    <div style={{ backgroundColor: color, width: 20, height: 20, marginRight: 10, paddingRight: 20 }}> </div>
+                    <div className='label' style={{maxWidth: '300px'}}>{label}</div>
                   </div>
                 </td>
-                <td className='value-bold'> <div className='value text-center' style={{ marginLeft: 20 }}>{value}</div></td>
+                <td className='value-bold'> <div className='value text-center' style={{ marginLeft: 30 }}>{value}</div></td>
               </tr>
             ))}
           </tbody>
@@ -213,8 +178,6 @@ return (
         <Bar data={data} options={options} className='chart' />
       </div>
     </div>
-
-  </>
 );
   } else {
   return (<>

@@ -16,7 +16,7 @@ const EducationContainer = () => {
       question1: '¿Cuál de los siguientes es tu nivel de educación completado?',
       question2: '¿Cómo obtuviste tus conocimientos de tecnología? Selecciona todos los que apliquen.',
       question3: '¿Cuáles son tus plataformas para aprender preferidas?',
-      question4: 'Sin incluir tu educación, ¿cuántos años tiene de trabajar en tecnología?',
+      question4: 'Sin incluir tu educación, ¿Cuántos años tienes de trabajar en tecnología?',
       question5: '¿Cuál de los siguientes describe tu trabajo actual?',
       question6: 'Aproximadamente, ¿Cuántos empleados tiene la organización para la que trabajas?',
       question7: '¿Cuál es tu compensación laboral anual sin descontar impuestos?',
@@ -24,7 +24,7 @@ const EducationContainer = () => {
       question9: '¿Tienes alguna certificación de las siguientes tecnologías?',
       question10: '¿Cuál de las siguientes define mejor la empresa para la que trabajas?',
       question11: '¿Con cuál lenguaje te comunicas profesionalmente?',
-      question12: '¿Cuál es tu nivel de ingles?',
+      question12: '¿Cuál es tu nivel de inglés?',
       question13: '¿Cómo aprendiste a hablar inglés?',
   }
   

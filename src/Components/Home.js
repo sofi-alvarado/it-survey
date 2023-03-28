@@ -6,8 +6,8 @@ import { Link } from "react-scroll";
 
 const Home = () => {
     const text = {
-        title: 'Encuesta para profesionales en Tecnologia | El Salvador 2022-2023',
-        github: 'Echale un vistazo al repositorio de este proyecto en ',
+        title: 'Encuesta para profesionales en Tecnología | El Salvador 2022-2023',
+        github: 'Échale un vistazo al repositorio de este proyecto en ',
         button: 'Ver los resultados'
     }
     return (
