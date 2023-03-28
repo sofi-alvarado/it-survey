@@ -111,7 +111,7 @@ const BarChart = ({chartInfo, autoSkipp}) => {
             top: 10
           }
         },
-        maintainAspectRatio: true,
+        maintainAspectRatio: false,
         plugins: {
           legend: {
             display: false,
