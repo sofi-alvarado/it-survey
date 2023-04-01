@@ -5,6 +5,7 @@ import EducationContainer from './Containers/EducationContainer';
 import TecnologyContainer from './Containers/TecnologyContainer';
 import DemographyContainer from './Containers/DemographyContainer';
 import FeedbackContainer from './Containers/FeedbackContainer';
+import Footer from './Components/Footer';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <TecnologyContainer />
         <DemographyContainer />
         <FeedbackContainer />
+        <Footer />
     </div>
   );
 }
