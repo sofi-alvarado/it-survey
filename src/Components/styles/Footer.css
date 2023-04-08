@@ -1,3 +1,24 @@
 h6 {
     font-weight: bold !important;
 }
+
+a:link {
+    text-decoration: none;
+
+}
+
+a:hover {
+    --bs-link-hover-color: #113f67;
+}
+
+a {
+    --bs-link-color: white ;
+    font-weight: bold;
+    word-spacing: 3px;
+}
+
+footer {
+    background-color: #aab1da;
+    margin-top: 80px;
+    padding-bottom: 0 !important;
+}

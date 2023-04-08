@@ -24,7 +24,7 @@
    background-color: #bbbbbb4e;
 }
 .offcanvas{
-    --bs-offcanvas-bg: #aab1da  !important;
+    --bs-offcanvas-bg: #aab1da !important;
     --bs-offcanvas-padding-x: 3rem !important;
     --bs-offcanvas-padding-y: 0.8rem !important;
     opacity: 1.0;

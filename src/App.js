@@ -10,6 +10,7 @@ import './App.css';
 
 function App() {
   return (
+    <>
       <div className="App">
         <Home />
         <GeneralContainer />
@@ -18,8 +19,9 @@ function App() {
         <TecnologyContainer />
         <DemographyContainer />
         <FeedbackContainer />
-        <Footer />
     </div>
+      <Footer />
+      </>
   );
 }
 

@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  padding-bottom: 0 !important;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif !important;
 }
@@ -104,12 +105,19 @@ nav {
 .primary-text {
   color: #313030;
 }
+.primary-text > a {
+  color: #113f67;
+}
+
+.primary-text > a:hover {
+  color: black;
+}
 .question {
   color: #8c95a8;
-  font-size: 0.8rem;
+  font-size: 1.0rem;
 }
 .secondary-button {
-  padding: 1rem 2.5rem;
+  padding: 1rem 2.5rem !important;
   background-color:  #aab1da;
   text-decoration: none;
   outline: none;
@@ -214,9 +222,11 @@ nav {
   }
   .chart-container {
     width: 100% !important;
-   
   }
   .chart {
+    min-height: 300px !important;
+  }
+  .donut-chart {
     min-height: 300px !important;
   }
 }

@@ -61,7 +61,7 @@ const DonutChart = ({ chartInfo }) => {
       }
     } // End of options
   
-    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} style={{maxHeight: '600px'}}/>;
+    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} style={{maxHeight: '600px'}} className='donut-chart'/>;
   } else {
     return (<div><h1>404</h1></div>);
   }
