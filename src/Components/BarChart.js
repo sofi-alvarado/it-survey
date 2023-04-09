@@ -20,152 +20,163 @@ ChartJS.register(
   Legend, ChartDataLabels
 );
 
-const BarChart = ({ chartInfo, autoSkipp, firstColor, secondColor }) => {
-
+const BarChart = ({chartInfo, autoSkipp}) => {
   if (chartInfo) {
     let labels = Object.keys(chartInfo);
-  
-
-    const backgroundOne = (ctx, chartArea) => {
-      const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
-      gradientBg.addColorStop(0, firstColor);
-      return gradientBg;
-    }
-
-    function getGradient(ctx, chartArea) {
-      const gradientBg = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
-      gradientBg.addColorStop(0, firstColor);
-      gradientBg.addColorStop(0, firstColor);
-      gradientBg.addColorStop(0.5, secondColor);
-      gradientBg.addColorStop(1, secondColor);
-      return gradientBg;
-    }
-
-    const data = {
-      labels,
-      datasets: [
-        {
-          label: 'Cantidad de respuestas',
-          data: labels.map((item) => chartInfo[item]),
-          /*backgroundColor: (context) => {
-            const chart = context.chart;
-            const { ctx, chartArea, scales } = chart;
-            if(!chartArea) {
-              return null
-            };
-            return getGradient(ctx, chartArea, scales)
-          }, */
-          backgroundColor: [
-            '#2c52b2',
-            '#f8aa14',
-            '#9d3030',
-            '#1ab032',
-            '#ee8f59',
-          ],
-          borderRadius: 8,
-          borderSkipped: false,
-          barPercentage: 0.6,
-          categoryPercentage: 0.7,
-        }
-      ],
-    };
-
-
-    const options = {
-      indexAxis: 'y',
-      scales: {
-        y: {
-          grid: {
-            display: false,
-          },
-          border: {
-            display: false,
-          },
-          ticks: {
-            display: function(context) {
-              return context.chart.width > 1200;
-            },
-            autoSkip: autoSkipp,
-            color: 'white',
-            align: 'center',
-            font: {
-              family: 'Roboto',
-              size: 15
-            },
-          },
-        },
-        x: {
-          beginAtZero: true,
-          grid: {
-            display: false,
-          },
-          border: {
-            display: false,
-          },
-          ticks: {
-            display: false,
+      const data = {
+        labels,
+        datasets: [
+          {
+            label: 'Cantidad de respuestas',
+            data: labels.map((item) => chartInfo[item]),
+            backgroundColor: [
+              '#113f67',
+              '#39577e',
+              '#597096',
+              '#788aae',
+              '#97a6c7',
+              '#b7c2e0',
+              '#d7dffa',
+              '#cdd6f3',
+              '#c4cded',
+              '#bbc3e6',
+              '#b3bae0',
+              '#aab1da',
+              '#a2a8d3',
+              '#b1afd8',
+              '#bfb7dd',
+              '#ccbfe1',
+              '#d8c8e6',
+              '#e3d0eb',
+              '#eed9f0',
+              '#e8c4e4',
+              '#e3afd6',
+              '#e099c6',
+              '#dc82b3',
+              '#d96a9e',
+              '#d45087',
+            ],
+            borderRadius: 8,
+            borderSkipped: false,
+            barPercentage: 1.0,
+            categoryPercentage: 0.9,
           }
-        }
-      },
-      responsive: true,
-      layout: {
-        padding: {
-          right: 50,
-          top: 10
-        }
-      },
-      maintainAspectRatio: true,
-      plugins: {
-        legend: {
-          display: false,
-        },
-        title: {
-          display: false,
-        },
+        ],
+      } // End of data
 
-        datalabels: {
-          formatter: (value, ctx) => {
-            const datapoints = ctx.chart.data.datasets[0].data
-            const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
-            const percentage = value / total * 100
-            return percentage.toFixed(2) + "%";
+      const options = {
+        indexAxis: 'y',
+        scales: {
+          y: {
+            grid: {
+              display: true,
+            },
+            border: {
+              display: true,
+            },
+            ticks: {
+              display: false,
+              autoSkip: autoSkipp,
+              color: 'black',
+              align: 'center'
+            },
           },
-        anchor: 'end',
-          align: 'right',
+          x: {
+            beginAtZero: true,
+            grid: {
+              display: true,
+            },
+            border: {
+              display: false,
+            },
+            ticks: {
+              display: true,
+              color: 'gray',
+              font: function (context) {
+                var avgSize = Math.round((context.chart.height + context.chart.width) / 2);
+                var size = Math.round(avgSize / 32);
+                size = size > 12 ? 12 : size; // setting max limit to 12
+                return {
+                    size: size,
+                    weight: 'bold'
+                };
+            },
+            }
+          }
+        },
+        responsive: true,
+        layout: {
+          padding: {
+            right: 50,
+            top: 10
+          }
+        },
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            display: false,
+          },
+          title: {
+            display: false,
+          },
+          datalabels: {
+            formatter: (value) => {
+              const total = 108
+              const percentage = value / total * 100
+              return percentage.toFixed(0) + '%';
+            }, 
+            anchor: 'top',
+            align: 'right',
             color: 'white',
-              font: {
-        weight: 'bold',
-          size: 12
-      },
-    },
-  },
+            textStrokeColor: 'grey',
+            textStrokeWidth: 2,
+              font: function (context) {
+                var avgSize = Math.round((context.chart.height + context.chart.width) / 2);
+                var size = Math.round(avgSize / 32);
+                size = size > 12 ? 12 : size; // setting max limit to 12
+                return {
+                    size: size,
+                    weight: 'bold'
+                };
+            },
+          },
+        },
+      } // End of options
 
-};
+      const legendData = Object.entries(data.datasets[0].data).map(([label, value], i) => ({
+        label: data.labels[i],
+        value,
+        color: data.datasets[0].backgroundColor[i],
+        })
+      );
 
-const legendData = Object.entries(data.datasets[0].data).map(([label, value], i) => ({
-  label: data.labels[i],
-  value,
-  color: data.datasets[0].backgroundColor[i],
-}));
-
-return (
-  <>
-    <Bar data={data} options={options} style={{ minHeight: '300px', minWidth: '350px'}} />
-    <div className='hide-on-desktop m-4'>
-      {legendData.map(({ label, color }) => (
-        <div key={label} className='d-flex '>
-          <div className='p-0' style={{ backgroundColor: color, width: 15, height: 15, marginRight: 10 }}></div>
-          <div className='white-font'>{label}</div>
-        </div>
-      ))}
-    </div>
-  </>
-);
+      return (
+          <div className='d-flex on-mobile'>
+            <div className='labels-container label-size' style={{ width: '35%', marginTop: '10px'}}>
+              <table>
+                <tbody>
+                  {legendData.map(({ label, value, color }) => (
+                    <tr key={label}>
+                      <td>
+                        <div className='d-flex labels'>
+                          <div style={{ backgroundColor: color, width: 20, height: 20, marginRight: 10, paddingRight: 20 }}> </div>
+                          <div className='label' style={{maxWidth: '300px'}}>{label}</div>
+                        </div>
+                      </td>
+                      <td className='value-bold'> <div className='value text-center' style={{ marginLeft: 30 }}>{value}</div></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className='chart-container align-items-center' style={{ width: '65%' }}>
+              <Bar data={data} options={options} className='chart' />
+            </div>
+          </div>
+        );
   } else {
-  return (<>
-    <div><h1>404</h1></div>
-  </>)
-}
+  return (<div><h1>404</h1></div>);
+  }
 }
 
 export default BarChart;

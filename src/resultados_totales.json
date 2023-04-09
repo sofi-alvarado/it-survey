@@ -1,16 +1,16 @@
 {
     "situacionDeEmpleo": {
         "Empleado, tiempo completo": 86,
-        "Estudiante, tiempo medio": 6,
         "Freelancer, contratista, consultor, trabajador independiente": 17,
         "Desempleado, en busca de empleo": 9,
-        "Estudiante, tiempo completo": 7
+        "Estudiante, tiempo completo": 7,
+        "Estudiante, tiempo medio": 6
     },
     "softwareDev": {
         "Soy un desarrollador de software": 72,
-        "No soy desarrollador, pero escribo código como parte de mi trabajo": 8,
-        "No soy desarrollador, pero soy profesional de tecnología informática ": 11,
         "Estoy aprendiendo a programar": 14,
+        "No soy desarrollador, pero soy profesional de tecnología informática": 11,
+        "No soy desarrollador, pero escribo código como parte de mi trabajo": 8,
         "Estoy aprendiendo sobre tecnología informática": 2
     },
     "modalidadDeTrabajo": {
@@ -19,87 +19,72 @@
         "Presencial": 22
     },
     "educacion": {
-        "Ingeniería/Licenciatura ": 56,
-        "Educación superior imcompleta": 17,
-        "Titulo técnico ": 17,
+        "Ingeniería/Licenciatura": 56,
+        "Educación superior incompleta": 17,
+        "Titulo técnico": 17,
         "Bachillerato (técnico o general)": 9,
-        "Maestría ": 8
+        "Maestría": 8
     },
     "aprendizaje": {
         "Universidad ": 80,
+        "Curso online": 80,
+        "Certificación": 39,
+        "Entrenamiento en el trabajo": 34,
+        "Libros": 30,
+        "Bootcamp": 18,
         "Instituto técnico": 16,
         "Bachillerato": 16,
-        "Bootcamp": 18,
-        "Curso online": 80,
-        "Certificación ": 39,
-        "Entrenamiento en el trabajo": 34,
-        "Pasantia": 14,
-        "Libros": 30,
+        "Pasantía": 14,
         "Otro": 3
     },
     "elearning": {
         "Udemy": 77,
         "YouTube": 97,
+        "Platzi": 26,
+        "Coursera": 22,
         "LinkedIn Learning": 13,
         "Pluralsight": 12,
-        "Codeacademy": 6,
-        "Coursera": 22,
-        "Platzi": 26,
         "edX": 9,
+        "Codecademy": 6,
         "Otro": 21
     },
     "experiencia": {
-        "1.0": 14,
-        "2.0": 9,
-        "3.0": 9,
-        "0.0": 10,
-        "10.0": 4,
-        "7.0": 7,
-        "3.5": 1,
-        "8.0": 8,
-        "11.0": 1,
-        "6.0": 5,
-        "9.0": 6,
-        "4.0": 8,
-        "15.0": 2,
-        "12.0": 5,
-        "5.0": 8,
-        "30.0": 1,
-        "14.0": 1,
-        "35.0": 1,
-        "23.0": 1,
-        "13.0": 1,
-        "17.0": 1
+        "Menos de 1 año": 10,
+        "De 1 a 4 años": 41,
+        "De 5 a 9 años": 34,
+        "De 10 a 14 años": 12,
+        "De 15 a 24 años": 4,
+        "De 25 a 35 años":	2
     },
     "trabajoTipo": {
         "Desarrollador full-stack": 41,
         "Desarrollador back-end": 34,
         "Desarrollador front-end": 13,
+        "Administrador de sistemas": 11,
+        "Analista de datos": 10,
+        "DevOps/SRE": 9,
+        "Estudiante": 9,
         "Desarrollador de aplicaciones móviles": 7,
         "Desarrollador de aplicaciones de escritorio": 7,
-        "Desarrollador de sistemas embebidos": 2,
-        "DevOps/SRE": 9,
-        "Administrador de sistemas": 11,
-        "Administrador de redes": 5,
         "Administrador de base de datos": 7,
+        "Desarrollador QA": 5,
+        "Administrador de redes": 5,
         "Project Manager": 5,
         "Diseñador": 3,
         "Ingeniero de datos": 3,
-        "Analista de datos": 10,
-        "Desarrollador QA": 5,
-        "Académico / Científico": 1,
-        "Estudiante": 9,
         "Ejecutivo": 3,
+        "Desarrollador de sistemas embebidos": 2,
+        "Académico/Científico": 1,
         "Otro": 10
     },
     "empleadosAprox": {
         "1, soy independiente": 13,
         "2 a 19 empleados": 11,
-        "20 a 99 empleados": 21,
-        "100 a 499 empleados": 17,
-        "500 a 999 empleados": 14,
+        "20 a 99 empleados": 21,
+        "100 a 499 empleados": 17,
+        "500 a 999 empleados": 14,
         "1,000 a 4,999 empleados": 10,
-        "5,000 empleados o mas": 12,
+        "5,000 empleados o más": 12,
         "No estoy seguro": 7
     },
     "compensacionMensual": {
@@ -120,31 +105,19 @@
         "Otro": 5
     },
     "certs": {
-        "AWS": 8,
-        "Azure": 15,
-        "Google Cloud": 3,
         "Cisco": 18,
-        "CompTIA": 1,
-        "ITIL": 1,
+        "Azure": 15,
+        "AWS": 8,
         "Agile PM/Scrum": 8,
+        "Google Cloud": 3,
         "Cybersecurity": 3,
-
-        "Kubernetes": 1,
-        "REDHAT": 1,
         "Oracle": 2,
         "Power BI": 2,
-        "Salesforce": 2,
-        "PostgreSQL": 1,
-        "ISTQB FCL": 1,
-        "ISTQB": 1,
-        "IBM y DeepLearning.Io": 1,
-        "Pegasystem": 1,
-        "Windows Server": 1,
-        "Terraform": 1
+        "Salesforce": 2
     },
     "empresaTipo": {
         "Empresa nacional": 47,
-        "Empresa internacional con oficinas en el país ": 37,
+        "Empresa internacional con oficinas en el país": 37,
         "Empresa totalmente en el exterior": 12,
         "Empresa consultora, servicios profesionales": 14
     },
@@ -154,122 +127,93 @@
         "Otro": 2
     },
     "nivelDeIngles": {
-        "Básico ": 31,
+        "Básico": 31,
         "Intermedio": 54,
         "Avanzado": 21
         
     },
     "inglesLearning": {
+        "Curso presencial": 48,
+        "Curso online": 34,
+        "Bachillerato o básica": 29,
+        "Libros": 19,
         "Universidad ": 17,
         "Instituto técnico": 9,
-        "Bachillerato o básica": 29,
-        "Curso presencial": 47,
-        "Curso online": 33,
         "Entrenamiento en el trabajo": 9,
-        "Libros": 19,
-        
-        
-        "Call center": 1,
-        "Autodidácta": 1,
-        "Jugando": 1,
-        "videojuegos en linea": 1,
-        "Beca de estudios": 1,
-        "Autodidacta": 3,
-
-        "Google": 1,
-        "Practica": 1,
-        "E4CC": 1
+        "Otro": 10
     },
     "lenguajesProgramar": {
-        "Assambly": 2,
-        "Bash/Shell": 6,
-        "C": 2,
-        "C#": 35,
-        "C++": 4,
-        "COBOL": 2,
+        "JavaScript": 69,
+        "SQL": 58,
         "HTML/CSS": 53,
         "Java": 43,
-        "JavaScript": 69,
-        "Kotlin": 4,
         "PHP": 39,
-        "PowerShell": 3,
-        "Python": 25,
-        "R": 3,
-        "SQL": 58,
-        "Swift": 2,
+        "C#": 35,
         "TypeScript": 33,
+        "Python": 25,
         "VBA": 11,
+        "Bash/Shell": 6,
+        "Kotlin": 4,
+        "C++": 4,
+        "PowerShell": 3,
+        "R": 3,
+        "Assambly": 2,
+        "C": 2,
+        "COBOL": 2,
+        "Swift": 2,
         "Otro": 3
+        
     },
     "cloud": {
         "AWS": 28,
+        "Azure": 25,
         "Google Cloud": 23,
         "DigitalOcean": 11,
-        "Firebase": 10,
         "Heroku": 11,
-        "Oracle Cloud": 4,
+        "Firebase": 10,
         "VMware": 5,
-        "IBM Cloud": 4,
-        "Azure": 25,
-        "Contabo ": 1,
-        "Salesforce ": 1,
-        "SAP": 1,
-        "Vercel": 1,
-        "Vultr": 1
+        "Oracle Cloud": 4,
+        "IBM Cloud": 4
+        
     },
     "webFrameworks": {
-        "Flask": 5,
         "Node.js": 30,
         "React.js": 26,
         "Spring": 25,
-        "Express": 17,
-        "Django": 7,
         "Angular": 24,
         "ASP .NET": 21,
+        "jQuery": 21,
         "ASP .NET Core": 20,
         "Laravel": 18,
+        "Express": 17,
         "Vue.js": 13,
         "Next.js": 8,
-        "jQuery": 21,
-        "Oracle": 1,
+        "Django": 7,
         "Angular.js": 5,
-        "Ruby on Rails": 2,
-        "Selenium y RestAssured": 1,
-        "Nest.js": 1,
-        "Otro ": 1
+        "Flask": 5,
+        "Otro ": 6
     },
     "libs": {
+        ".NET": 31,
+        "React Native": 11,
         "Apache Kafka": 9,
         "NumPy": 7,
         "Pandas": 7,
-        ".NET": 31,
-        "React Native": 11,
         "Flutter": 7,
-        "Xamarin": 3,
-        "Oracle": 1,
         "TensorFlow": 5,
-        "Apache Spark": 2,
-        "Hadoop": 1,
-        "Torch/PyTorch": 2,
-        "Spring Boot": 1,
-        "React": 1,
-        "Ionic": 1,
-        "Otro": 1
+        "Xamarin": 3,
+        "Otro": 10
     },
     "devTools": {
-        "Chef": 1,
-        "Docker": 47,
-        "Elastic": 4,
-        "Kubernetes": 18,
         "npm": 49,
-        "Terraform": 4,
-        "Pega": 1,
+        "Docker": 47,
+        "Kubernetes": 18,
         "Yarn": 16,
-        "Ansible": 3,
         "Salesforce": 9,
         "Homebrew": 5,
-        "Oracle": 1,
-        "Devexpress": 1
+        "Terraform": 4,
+        "Elastic": 4,
+        "Ansible": 3
     },
     "os": {
         "macOS": 20,
@@ -299,12 +243,12 @@
         "Indiferente": 27,
         "Muy Desfavorable": 5,
         "Desfavorable": 2,
-        "No tengo una opinión al respecto ": 14
+        "No tengo una opinión al respecto": 14
     },
     "infosec": {
-        "Entrenamiento de security awareness ": 7,
         "Educación académica": 65,
-        "Entrenamiento especializado ": 4
+        "Entrenamiento de security awareness": 7,
+        "Entrenamiento especializado": 4
     },
     "implementaciones": {
         "DevOps": 49,
@@ -316,10 +260,10 @@
         "AI/ML/DL": 4
     },
     "edad": {
-        "18-24 años": 25,
-        "25-34 años": 59,
-        "35-44 años": 19,
-        "45-55 años": 4
+        "18-24 años": 25,
+        "25-34 años": 59,
+        "35-44 años": 19,
+        "45-55 años": 4
     },
     "genero": {
         "Hombre": 94,
@@ -327,37 +271,37 @@
         "Prefiero no decir": 1
     },
     "callcenter": {
-        "Si, por poco tiempo": 13,
-        "Si, por mucho tiempo": 7,
-        "Nunca": 87
+        "Nunca": 87,
+        "Sí, por poco tiempo": 13,
+        "Sí, por mucho tiempo": 7
     },
     "atributos": {
         "Tengo problemas emocionales": 12,
         "Tengo problemas de salud físicos (gastrointestinales, respiratorios, etc)": 8,
-        "Tengo problemas de aprendizaje ": 7,
-        "Tengo una invalidez física total o parcial": 1,
+        "Tengo problemas de aprendizaje ": 7,
+        "Tengo una invalidez física total o parcial": 1,
         "Prefiero no decir": 3,
         "Ninguno de los anteriores": 72
     },
     "departamento": {
         "San Salvador": 61,
-        "La Unión": 2,
         "La Libertad": 18,
-        "Chalatenango": 3,
-        "Morazán": 1,
-        "Santa Ana": 4,
-        "Cabañas": 1,
         "Sonsonate": 6,
+        "Santa Ana": 4,
+        "Chalatenango": 3,
         "La Paz": 3,
+        "La Unión": 2,
         "San Miguel": 2,
-        "Ahuachapán": 1,
         "Cuscatlán": 2,
-        "San Vicente": 2
+        "San Vicente": 2,
+        "Morazán": 1,
+        "Cabañas": 1,
+        "Ahuachapán": 1
     },
     "duracion": {
-        "Muy corta": 3,
+        "Duración apropiada": 91,
         "Muy larga": 13,
-        "Duración apropiada": 91
+        "Muy corta": 3
     },
     "dificultad": {
         "Difícil": 1,

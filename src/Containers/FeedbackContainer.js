@@ -1,20 +1,18 @@
 import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
-import myData from "../resultados_totales.json";
+import myData from '../resultados_totales.json';
 import ChartComponent from '../Components/ChartComponent';
+import DonutChart from '../Components/DonutChart';
 
 const FeedbackContainer = () => {
-    const firstColor='#da6008';
-    const secondColor='#ee8f59 ';
-
     const text = {
         title: 'Feedback',
         chartTitle: 'Chart Title',
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.',
         question1: '¿Cómo sientes que fue la duración de esta encuesta?',
         question2: '¿Qué tan difícil fue completar esta encuesta?',
-        question3: '¿Con cuantas estrellas evaluarías esta encuesta?',
+        question3: '¿Con cuántas estrellas evaluarías esta encuesta?',
     }
 
     return (
@@ -31,9 +29,7 @@ const FeedbackContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.duracion}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question1}
             />
         {/* Question 2 */}
@@ -41,11 +37,8 @@ const FeedbackContainer = () => {
                 title={text.title}
                 chartTitle={text.chartTitle}
                 chartDescription={text.text}
-                chart={<BarChart
-                    chartInfo={myData.dificultad}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                chart={<DonutChart
+                    chartInfo={myData.dificultad} />}
                 question={text.question2}
             />
         {/* Question 3 */}
@@ -55,14 +48,11 @@ const FeedbackContainer = () => {
                 chartDescription={text.text}
                 chart={<BarChart
                     chartInfo={myData.evaluacion}
-                    autoSkipp={false} 
-                    firstColor={firstColor}
-                    secondColor={secondColor} />}
+                    autoSkipp={false} />}
                 question={text.question3}
             />
         </>
-
-    )
+    );
 }
 
 export default FeedbackContainer;

@@ -5,9 +5,7 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
-
-
+const DonutChart = ({ chartInfo }) => {
   if (chartInfo) {
     let labels = Object.keys(chartInfo);
 
@@ -18,54 +16,54 @@ const DonutChart = ({ chartInfo, firstColor, secondColor }) => {
           label: 'Cantidad de respuestas',
           data: labels.map((item) => chartInfo[item]),
           backgroundColor: [
-            '#2c52b2',
-            '#f8aa14',
-            '#9d3030',
-            '#1ab032',
-            '#ee8f59',
+            '#113f67',
+            '#597096',
+            '#97a6c7',
+            '#d7dffa',
+            '#c4cded',
+            '#b3bae0',
+            '#a2a8d3'
           ],
           borderWidth: 0,
           hoverOffset: 15
         },
       ],
-    };
+    } //End of data
 
     const options = {
-      
+      layout: {
+        padding: 15
+      },
+     
+      maintainAspectRatio: false,
       plugins: {
         legend: {
+          onClick: (e) => e.stopPropagation(),
           position: 'bottom',
           labels: {
-            color: 'white'
+            color: '#313030'
           },
         },
-        layout: {
-          padding: 15
-        },
-       
         datalabels: {
-          formatter: (value, ctx) => {
-            const datapoints = ctx.chart.data.datasets[0].data
-            const total = datapoints.reduce((total, datapoint) => total + datapoint, 0)
+          formatter: (value) => {
+            const total = 108
             const percentage = value / total * 100
-            return percentage.toFixed(0) + "%";
+            return percentage.toFixed(0) + '%';
           },
           display: true,
-          color: "white",
+          color: 'white',
+          textStrokeColor: 'grey',
+          textStrokeWidth: 4,
           font: {
             weight: 'bold'
           },
         }
       }
-      
-    }
-
-
-    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} style={{maxHeight: '600px'}} />;
+    } // End of options
+  
+    return <Doughnut data={data} plugins={[ChartDataLabels]} options={options} style={{maxHeight: '600px'}} className='donut-chart'/>;
   } else {
-    return (<>
-      <div><h1>404</h1></div>
-    </>)
+    return (<div><h1>404</h1></div>);
   }
 }
 

@@ -1,0 +1,29 @@
+name: CD
+
+on:
+  push:
+    branches: [ "stage" ]
+    
+env:
+  CI: false
+
+jobs:
+  s3_deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@stage
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run build
+      - name: Deploy app build to S3 bucket
+        run: |
+          aws s3 rm s3://stagereact.jorgedemo.com --recursive
+          aws s3 sync ./build/ s3://stagereact.jorgedemo.com
