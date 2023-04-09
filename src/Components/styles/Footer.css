@@ -1,6 +1,3 @@
-h6 {
-    font-weight: bold !important;
-}
 
 a:link {
     text-decoration: none;
@@ -13,7 +10,7 @@ a:hover {
 
 a {
     --bs-link-color: white ;
-    font-weight: bold;
+    
     word-spacing: 3px;
 }
 
@@ -22,3 +19,10 @@ footer {
     margin-top: 80px;
     padding-bottom: 0 !important;
 }
+
+@media screen and (max-width: 1200px) {
+    .content > ul > li > a {
+        font-size: 0.9rem !important;
+    }
+}
+  

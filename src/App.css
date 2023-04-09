@@ -107,6 +107,7 @@ nav {
 }
 .primary-text > a {
   color: #113f67;
+  font-weight: bold;
 }
 
 .primary-text > a:hover {

@@ -20,7 +20,7 @@ const Home = () => {
                     <div className='home-text-section d-flex justify-content-center mx-5'>
                         <h1 className='primary-heading'>{text.title}</h1>
                         <p className='primary-text'>
-                            {text.github} <a href='https://github.com/sofi-alvarado/it-survey'>GitHub</a>
+                            {text.github} <a href='https://github.com/sofi-alvarado/it-survey' target='_blank' rel='noreferrer'>GitHub</a>
                         </p>
                         <Link className='secondary-button' to='basic-info'>
                             {text.button} {' '}
