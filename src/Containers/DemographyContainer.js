@@ -1,7 +1,6 @@
 import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
-import DonutChart from '../Components/DonutChart';
 import myData from '../resultados_totales.json';
 import textData from '../text';
 import ChartComponent from '../Components/ChartComponent';
@@ -21,7 +20,7 @@ const DemographyContainer = () => {
                 id='demography'
                 className='demography-card'
                 title={textData.cards.demography.title}
-                chartDescription={textData.cards.demography.description}
+                cardDescription={textData.cards.demography.description}
             />
             {/* Question 1 */}
               <ChartComponent
@@ -38,8 +37,9 @@ const DemographyContainer = () => {
                 title={textData.cards.demography.title}
                 chartTitle={textData.chartDescription.genero.title}
                 chartDescription={textData.chartDescription.genero.description}
-                chart={<DonutChart
-                    chartInfo={myData.genero} />}
+                chart={<BarChart
+                    chartInfo={myData.genero} 
+                    autoSkipp={false} />}
                 question={text.question2}
             />
             {/* Question 3 */}

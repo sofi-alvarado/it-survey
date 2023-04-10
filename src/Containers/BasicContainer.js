@@ -1,7 +1,6 @@
 import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
-import DonutChart from '../Components/DonutChart';
 import myData from '../resultados_totales.json';
 import textData from '../text';
 import ChartComponent from '../Components/ChartComponent';
@@ -19,7 +18,7 @@ const BasicContainer = () => {
                 id='basic-info'
                 className='basic-info-card'
                 title={textData.cards.basicInformation.title}
-                chartDescription={textData.cards.basicInformation.description}
+                cardDescription={textData.cards.basicInformation.description}
             />
         {/* Question 1 */}
             <ChartComponent
@@ -46,8 +45,9 @@ const BasicContainer = () => {
                 title={textData.cards.basicInformation.title}
                 chartTitle={textData.chartDescription.modalidadDeTrabajo.title}
                 chartDescription={textData.chartDescription.modalidadDeTrabajo.description}
-                chart={<DonutChart
-                    chartInfo={myData.modalidadDeTrabajo} />}
+                chart={<BarChart
+                    chartInfo={myData.modalidadDeTrabajo} 
+                    autoSkipp={false} />}
                 question={text.question3}
             />
         </>

@@ -1,7 +1,6 @@
 import React from 'react';
 import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
-import DonutChart from '../Components/DonutChart';
 import myData from '../resultados_totales.json';
 import textData from '../text';
 import ChartComponent from '../Components/ChartComponent';
@@ -29,7 +28,7 @@ const EducationContainer = () => {
                 id='education-info'
                 className='education-card'
                 title={textData.cards.education.title}
-                chartDescription={textData.cards.education.description}
+                cardDescription={textData.cards.education.description}
             />
 
     {/* Question 1 */}
@@ -107,8 +106,9 @@ const EducationContainer = () => {
                 title={textData.cards.education.title}
                 chartTitle={textData.chartDescription.frecuenciaSalario.title}
                 chartDescription={textData.chartDescription.frecuenciaSalario.description}
-                chart={<DonutChart
-                    chartInfo={myData.frequenciaDeSalario} />}
+                chart={<BarChart
+                    chartInfo={myData.frequenciaDeSalario} 
+                    autoSkipp={false} />}
                 question={text.question8}
         />
     {/* Question 9 */}
@@ -124,10 +124,11 @@ const EducationContainer = () => {
     {/* Question 10 */}
          <ChartComponent
                 title={textData.cards.education.title}
-                chartTitle={textData.chartDescription.empleadosAprox.title}
-                chartDescription={textData.chartDescription.empleadosAprox.description}
-                chart={<DonutChart
-                    chartInfo={myData.empresaTipo} />}
+                chartTitle={textData.chartDescription.empresaTipo.title}
+                chartDescription={textData.chartDescription.empresaTipo.description}
+                chart={<BarChart
+                    chartInfo={myData.empresaTipo} 
+                    autoSkipp={false} />}
                 question={text.question10}
         />
     {/* Question 11 */}
@@ -135,8 +136,9 @@ const EducationContainer = () => {
                 title={textData.cards.education.title}
                 chartTitle={textData.chartDescription.lenguajesHablar.title}
                 chartDescription={textData.chartDescription.lenguajesHablar.description}
-                chart={<DonutChart
-                    chartInfo={myData.lenguajesHablar} />}
+                chart={<BarChart
+                    chartInfo={myData.lenguajesHablar} 
+                    autoSkipp={false} />}
                 question={text.question11}
         />
     {/* Question 12 */}
@@ -144,8 +146,9 @@ const EducationContainer = () => {
                 title={textData.cards.education.title}
                 chartTitle={textData.chartDescription.nivelDeIngles.title}
                 chartDescription={textData.chartDescription.nivelDeIngles.description}
-                chart={<DonutChart
-                    chartInfo={myData.nivelDeIngles } />}
+                chart={<BarChart
+                    chartInfo={myData.nivelDeIngles } 
+                    autoSkipp={false} />}
                 question={text.question12}
         />
     {/* Question 13 */}

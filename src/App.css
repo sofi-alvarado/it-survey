@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif !important;
 }
+
 .App-header {
   display: flex;
   flex-direction: column;
@@ -13,6 +14,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .App {
   min-height: 100vh;
   width: 85vw;
@@ -24,27 +26,32 @@
 }
 body {
   max-width: 100%;
-  overflow-x: hidden;
 }
+
 .black-font {
   color: #313030 !important
 }
+
 .chart-title-size {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: bold;
   color: #113f67 !important;
 }
+
 .divider {
   --bs-border-color: #0e2c46 !important;
 }
+
 .font-size {
   font-size: 1.31538rem;
 }
+
 .home-banner-container {
   position: relative;
   display: flex;
   padding-top: 3rem;
 }
+
 .home-bannerImage-container {
   position: absolute;
   top: -100px;
@@ -52,11 +59,13 @@ body {
   z-index: -2;
   max-width: 700px;
 }
+
 .home-image-section {
   max-width: 800px;
   flex: 1;
- 
+
 }
+
 .home-text-section {
   flex: 1;
   display: flex;
@@ -64,28 +73,35 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 .label-size {
   font-size: large;
 }
+
 .link {
   color: white !important;
 }
+
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: 90px;
 }
+
 .navbar-menu-container {
   display: none;
 }
+
 .primary-button:hover {
   background-color: rgb(234, 234, 234);
 }
+
 .primary-button {
   padding: 0.9rem 1.75rem;
   background-color: white;
@@ -97,29 +113,34 @@ nav {
   font-weight: 600;
   transition: 0.2s;
 }
+
 .primary-heading {
   font-size: clamp(2rem, 5vw, 3.5rem);
   /* line-height: 5rem; */
   color: #113f67 !important;
 }
+
 .primary-text {
   color: #313030;
 }
-.primary-text > a {
+
+.primary-text>a {
   color: #113f67;
   font-weight: bold;
 }
 
-.primary-text > a:hover {
+.primary-text>a:hover {
   color: black;
 }
+
 .question {
   color: #8c95a8;
   font-size: 1.0rem;
 }
+
 .secondary-button {
   padding: 1rem 2.5rem !important;
-  background-color:  #aab1da;
+  background-color: #aab1da;
   text-decoration: none;
   outline: none;
   border: none;
@@ -133,26 +154,33 @@ nav {
   align-items: center;
   justify-content: center;
 }
+
 .secondary-button:hover {
-  background-color:  #aab1dace;
+  background-color: #aab1dace;
   color: #113f67;
 }
+
 .text-justify {
   text-align: justify;
 }
+
 .title {
   color: #97a6c7 !important;
 }
+
 .title-size {
   font-size: 1.41538rem;
 }
+
 .value-bold {
   font-weight: bold;
   color: black;
 }
+
 .white {
   color: black !important
 }
+
 .white-font {
   color: #FFFFFF !important;
 }
@@ -162,37 +190,51 @@ nav {
   .nav-logo-container {
     max-width: 140px;
   }
+
   .navbar-links-container {
     display: none;
   }
+
   .navbar-menu-container {
     display: flex;
   }
+
   .home-bannerImage-container {
     max-width: 450px;
   }
+
   .home-banner-container {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
   }
+
   .home-image-section {
     width: 100%;
     max-width: 700px;
   }
+
   .primary-heading {
     text-align: center;
     max-width: 90%;
   }
+
   .secondary-button {
     font-size: 1rem;
     padding: 0.8rem 2rem;
     cursor: pointer;
   }
+
   .App {
     max-width: 95vw;
   }
+
+  .home-text-section {
+    display: flex;
+    align-items: center;
+  }
 }
+
 @media (max-width: 600px) {
   .home-bannerImage-container {
     display: none;
@@ -202,32 +244,53 @@ nav {
 @media screen and (max-width: 1200px) {
   .on-mobile {
     flex-direction: column-reverse;
-  } 
+  }
+  .hidden {
+    display: none;
+    
+  }
+
   .label-size {
     font-size: small;
-  } 
+  }
   .labels {
     max-width: 250px;
   }
+
   .label {
     width: 100%;
     margin-bottom: 10px;
   }
+
   .labels-container {
     width: 100% !important;
     margin: 10px;
   }
+
   .value {
     margin-left: 20px !important;
-   
+
+  }
+  .card-description {
+    hyphens: auto;
   }
   .chart-container {
     width: 100% !important;
   }
+  .chart-description {
+    text-align: justify;
+  }
   .chart {
     min-height: 300px !important;
   }
+
   .donut-chart {
     min-height: 300px !important;
+  }
+  .question {
+    font-size: 0.9rem;
+  }
+  .p-5 {
+    padding: 2rem !important;
   }
 }

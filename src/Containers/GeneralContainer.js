@@ -8,7 +8,7 @@ const GeneralContainer = () => {
                 id='general'
                 className='general-card' 
                 title={textData.cards.general.title}
-                chartDescription={textData.cards.general.description}
+                cardDescription={textData.cards.general.description}
                 />
     );
 }

@@ -38,8 +38,8 @@
         "Otro": 3
     },
     "elearning": {
-        "Udemy": 77,
         "YouTube": 97,
+        "Udemy": 77,
         "Platzi": 26,
         "Coursera": 22,
         "LinkedIn Learning": 13,
@@ -101,8 +101,8 @@
         "Quincenal": 57,
         "Mensual": 34,
         "Por proyecto": 8,
-        "Semanal": 1,
-        "Otro": 5
+        "Otro": 5,
+        "Semanal": 1
     },
     "certs": {
         "Cisco": 18,
@@ -118,8 +118,8 @@
     "empresaTipo": {
         "Empresa nacional": 47,
         "Empresa internacional con oficinas en el país": 37,
-        "Empresa totalmente en el exterior": 12,
-        "Empresa consultora, servicios profesionales": 14
+        "Empresa consultora, servicios profesionales": 14,
+        "Empresa totalmente en el exterior": 12
     },
     "lenguajesHablar": {
         "Español": 92,
@@ -127,8 +127,8 @@
         "Otro": 2
     },
     "nivelDeIngles": {
-        "Básico": 31,
         "Intermedio": 54,
+        "Básico": 31,
         "Avanzado": 21
         
     },
@@ -216,10 +216,10 @@
         "Ansible": 3
     },
     "os": {
-        "macOS": 20,
-        "Linux": 31,
-        "Windows Subsystem for Linux (WSL)": 16,
         "Windows": 87,
+        "Linux": 31,
+        "macOS": 20,
+        "Windows Subsystem for Linux (WSL)": 16,
         "Chrome OS": 1
     },
     "git": {
@@ -230,12 +230,12 @@
     "versionControl": {
         "GitHub": 62,
         "GitLab": 32,
-        "Sistema personalizado": 5,
         "Bitbucket": 15,
         "Azure Repos": 9,
-        "AWS CodeCommit": 1,
+        "Sistema personalizado": 5,
+        "Ninguno": 5,
         "Otro": 5,
-        "Ninguno": 5
+        "AWS CodeCommit": 1
     },
     "blockchain": {
         "Muy favorable": 24,
@@ -251,10 +251,10 @@
         "Entrenamiento especializado": 4
     },
     "implementaciones": {
-        "DevOps": 49,
         "Agile/Scrum": 59,
-        "CI/CD": 36,
+        "DevOps": 49,
         "Microservicios": 44,
+        "CI/CD": 36,
         "Pruebas automatizadas": 23,
         "Herramientas de observabilidad": 9,
         "AI/ML/DL": 4
@@ -304,9 +304,9 @@
         "Muy corta": 3
     },
     "dificultad": {
-        "Difícil": 1,
         "Fácil": 76,
-        "Ni fácil ni difícil": 30
+        "Ni fácil ni difícil": 30,
+        "Difícil": 1
     },
     "evaluacion": {
         "5.0": 52,
