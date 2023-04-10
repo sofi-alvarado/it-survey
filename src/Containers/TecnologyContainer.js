@@ -3,6 +3,7 @@ import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
 import myData from '../resultados_totales.json';
+import text from '../text'
 import ChartComponent from '../Components/ChartComponent';
 
 const TecnologyContainer = () => {
