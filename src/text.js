@@ -6,7 +6,7 @@ const text = {
         },
         basicInformation: {
             title: 'Información Básica',
-            description: 'La primera seccion de la encuesta esta dedicada a identificar los encuestados que trabajan en tecnologia, y si se describen a si mismos como desarrolladores, ademas de la modalidad en que trabajan.',
+            description: 'La primera sección de la encuesta está dedicada a identificar los encuestados que trabajan en tecnología, y si se describen a sí mismos como desarrolladores, además de la modalidad en que trabajan.',
         },
         education: {
             title: 'Educación, Trabajo y Carrera',
