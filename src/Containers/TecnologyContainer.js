@@ -27,7 +27,7 @@ const TecnologyContainer = () => {
                 id='tecnology'
                 className='tecnology-card'
                 title={textData.cards.tecnology.title}
-                chartDescription={textData.cards.tecnology.description}
+                cardDescription={textData.cards.tecnology.description}
             />
             {/* Question 1 */}
                 <ChartComponent
@@ -84,7 +84,8 @@ const TecnologyContainer = () => {
                 title={textData.cards.tecnology.title}
                 chartTitle={textData.chartDescription.os.title}
                 chartDescription={textData.chartDescription.os.description}
-                chart={<DonutChart chartInfo={myData.os}/>}
+                chart={<BarChart chartInfo={myData.os}
+                    autoSkipp={false} />}
                 question={text.question6}
             />
             {/* Question 7 */}
@@ -92,7 +93,8 @@ const TecnologyContainer = () => {
                 title={textData.cards.tecnology.title}
                 chartTitle={textData.chartDescription.git.title}
                 chartDescription={textData.chartDescription.git.description}
-                chart={<DonutChart chartInfo={myData.git} />}
+                chart={<BarChart chartInfo={myData.git} 
+                    autoSkipp={false} />}
                 question={text.question7}
             />
             {/* Question 8 */}
@@ -119,8 +121,9 @@ const TecnologyContainer = () => {
                 title={textData.cards.tecnology.title}
                 chartTitle={textData.chartDescription.infosec.title}
                 chartDescription={textData.chartDescription.infosec.description}
-                chart={<DonutChart
-                    chartInfo={myData.infosec} />}
+                chart={<BarChart
+                    chartInfo={myData.infosec} 
+                    autoSkipp={false} />}
                 question={text.question10}
             />
             {/* Question 11 */}

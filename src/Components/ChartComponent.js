@@ -10,9 +10,9 @@ const ChartComponent = ({title, chartTitle, chartDescription, chart, question}) 
                     <p className='title title-size'>{title}</p>
                         <h2 className='white chart-title-size'>{chartTitle}</h2>
                             <div className='col'>
-                                <p className='black-font'>{chartDescription}</p>
+                                <p className='chart-description black-font'>{chartDescription}</p>
                             </div>
-                            <div className='col'></div>
+                            <div className='col hidden'></div>
                 </div>
                 <hr className='hr border divider border-1'/>
                 <div className='d-flex row justify-content-center'>

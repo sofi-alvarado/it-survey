@@ -1,23 +1,21 @@
-
-a:link {
-    text-decoration: none;
-
-}
-
-a:hover {
-    --bs-link-hover-color: #113f67;
-}
-
 a {
     --bs-link-color: white ;
     
     word-spacing: 3px;
 }
-
+a:hover {
+    --bs-link-hover-color: #113f67;
+}
+a:link {
+    text-decoration: none;
+}
 footer {
     background-color: #aab1da;
     margin-top: 80px;
     padding-bottom: 0 !important;
+}
+.github {
+    justify-content: center !important;
 }
 
 @media screen and (max-width: 1200px) {

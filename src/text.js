@@ -2,7 +2,7 @@ const text = {
     cards: {
         general: {
             title: 'General',
-            description: 'Encuesta basada en Stack Overflow Developer Survey 2022 bajo licencia de Open Database License (ODbL). La finalidad de esta encuesta es que aprendamos más sobre las tendencias de tecnología y los perfiles profesionales en el país, y que los datos recolectados nos ayuden a tomar decisiones profesionales o académicas. Los resultados de la encuesta están publicados bajo licencia ODbL, en github.com/jorgesoft/encuesta-it-el-salvador-2023. Ninguna pregunta hizo referencia a información personal como nombres, email o número telefónico, y todas las preguntas fueron opcionales. Para feedback o preguntas, escríbeme a contact@jorgesilva.pro Encuesta inspirada en línea aquí',
+            description: 'Encuesta basada en Stack Overflow Developer Survey 2022 bajo licencia de Open Database License (ODbL). La finalidad de esta encuesta es que aprendamos más sobre las tendencias de tecnología y los perfiles profesionales en el país, y que los datos recolectados nos ayuden a tomar decisiones profesionales o académicas. Los resultados de la encuesta están publicados bajo licencia ODbL, en github.com/jorgesoft/encuesta-it-el-salvador-2023. Ninguna pregunta hizo referencia a información personal como nombres, email o número telefónico, y todas las preguntas fueron opcionales. Para feedback o preguntas, escríbeme a contact@jorgesilva.pro',
         },
         basicInformation: {
             title: 'Información Básica',
@@ -44,7 +44,7 @@ const text = {
         },
         aprendizaje: {
             title: 'Modalidad de Aprendizaje',
-            description: 'Universidad y cursos online tuvieron la misma cantidad de respuestas. Los encuestados entre 18 y 24 años rara vez utilizan libros para aprender, AGREGAR'
+            description: 'Universidad y cursos online tuvieron la misma cantidad de respuestas. Los encuestados entre 18 y 24 años rara vez utilizan libros para aprender.'
         },
         elearning: {
             title: 'Plataformas Online Preferidas',
@@ -52,7 +52,7 @@ const text = {
         },
         experiencia: {
             title: 'Años de Experiencia',
-            description: '97% de los encuestados reportó usar YouTube para aprender online.  Es interesante observar que el 99% de encuestados reporta usar una plataforma de aprendizaje online, independientemente de su edad o años de experiencia.'
+            description: 'El top 3% de salarios reportó tener de 1 a 5 años de experiencia. La mayoría de las personas con más de 10 años de experiencia trabajan como desarrolladores para empresas nacionales.'
         },
         trabajoTipo: {
             title: 'Descripción del Trabajo',

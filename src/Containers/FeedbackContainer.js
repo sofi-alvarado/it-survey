@@ -4,7 +4,6 @@ import BarChart from '../Components/BarChart';
 import myData from '../resultados_totales.json';
 import textData from '../text';
 import ChartComponent from '../Components/ChartComponent';
-import DonutChart from '../Components/DonutChart';
 
 const FeedbackContainer = () => {
     const text = {
@@ -19,7 +18,7 @@ const FeedbackContainer = () => {
                 id='feedback'
                 className='feedback-card'
                 title={textData.cards.feedback.title}
-                chartDescription={textData.cards.feedback.description}
+                cardDescription={textData.cards.feedback.description}
             />
         {/* Question 1 */}
               <ChartComponent
@@ -36,8 +35,9 @@ const FeedbackContainer = () => {
                 title={textData.cards.feedback.title}
                 chartTitle={textData.chartDescription.dificultad.title}
                 chartDescription={textData.chartDescription.dificultad.description}
-                chart={<DonutChart
-                    chartInfo={myData.dificultad} />}
+                chart={<BarChart
+                    chartInfo={myData.dificultad} 
+                    autoSkipp={false} />}
                 question={text.question2}
             />
         {/* Question 3 */}
