@@ -3,13 +3,11 @@ import CardItem from '../Components/CardItem';
 import BarChart from '../Components/BarChart';
 import DonutChart from '../Components/DonutChart';
 import myData from '../resultados_totales.json';
+import textData from '../text';
 import ChartComponent from '../Components/ChartComponent';
 
 const DemographyContainer = () => {
     const text = {
-        title: 'Demografía',
-        chartTitle: 'Chart Title',
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est pellentesque elit ullamcorper dignissim cras tincidunt.',
         question1: '¿Cuál es tu edad?',
         question2: '¿Cuál de los siguientes te describe mejor?',
         question3: '¿Alguna vez has trabajado en call-center?',
@@ -22,13 +20,14 @@ const DemographyContainer = () => {
             <CardItem
                 id='demography'
                 className='demography-card'
-                title={text.title}
+                title={textData.cards.demography.title}
+                chartDescription={textData.cards.demography.description}
             />
             {/* Question 1 */}
               <ChartComponent
-                title={text.title}
-                chartTitle={text.chartTitle}
-                chartDescription={text.text}
+                title={textData.cards.demography.title}
+                chartTitle={textData.chartDescription.edad.title}
+                chartDescription={textData.chartDescription.edad.description}
                 chart={<BarChart
                     chartInfo={myData.edad}
                     autoSkipp={false} />}
@@ -36,18 +35,18 @@ const DemographyContainer = () => {
             />
             {/* Question 2 */}
                 <ChartComponent
-                title={text.title}
-                chartTitle={text.chartTitle}
-                chartDescription={text.text}
+                title={textData.cards.demography.title}
+                chartTitle={textData.chartDescription.genero.title}
+                chartDescription={textData.chartDescription.genero.description}
                 chart={<DonutChart
                     chartInfo={myData.genero} />}
                 question={text.question2}
             />
             {/* Question 3 */}
                 <ChartComponent
-                title={text.title}
-                chartTitle={text.chartTitle}
-                chartDescription={text.text}
+                title={textData.cards.demography.title}
+                chartTitle={textData.chartDescription.callcenter.title}
+                chartDescription={textData.chartDescription.callcenter.description}
                 chart={<BarChart
                     chartInfo={myData.callcenter}
                     autoSkipp={false} />}
@@ -55,9 +54,9 @@ const DemographyContainer = () => {
             />
             {/* Question 4 */}
                 <ChartComponent
-                title={text.title}
-                chartTitle={text.chartTitle}
-                chartDescription={text.text}
+                title={textData.cards.demography.title}
+                chartTitle={textData.chartDescription.atributos.title}
+                chartDescription={textData.chartDescription.atributos.description}
                 chart={<BarChart
                     chartInfo={myData.atributos}
                     autoSkipp={false} />}
@@ -65,9 +64,9 @@ const DemographyContainer = () => {
             />
             {/* Question 5 */}
                 <ChartComponent
-                title={text.title}
-                chartTitle={text.chartTitle}
-                chartDescription={text.text}
+                title={textData.cards.demography.title}
+                chartTitle={textData.chartDescription.departamento.title}
+                chartDescription={textData.chartDescription.departamento.description}
                 chart={<BarChart
                     chartInfo={myData.departamento}
                     autoSkipp={false} />}

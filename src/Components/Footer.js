@@ -7,7 +7,7 @@ const Footer = () => {
         link1: 'https://www.linkedin.com/in/sofi-alvarado/',
         link2: 'https://github.com/sofi-alvarado',
         link3: 'https://survey.stackoverflow.co/2022/',
-        link4: 'https://forms.office.com/Pages/DesignPageV2.aspx?subpage=design&token=936ed0a33ccd40d0986ec155b9844e13&id=SaJrjRQDxkSRcVyRsKSFosuBv6kdsBlFurcvZm2W2qxURVNIS0JTQjlaNjJWN1pQTVNUM0pTUkdVVy4u&analysis=true'
+        link4: 'https://github.com/jorgesoft/encuesta-it-el-salvador-2023'
     }
     return (
         <>
@@ -20,7 +20,7 @@ const Footer = () => {
                     <div className='content mx-4 m-4'>
                         <ul className='list-unstyled '>
                             <li><a href={text.link3} target='_blank' rel='noreferrer'>StackOverflow 2022 Developer Survey</a></li>
-                            <li><a href={text.link4} target='_blank' rel='noreferrer'>Encuesta para profesionales en Tecnología El Salvador 2022-2023</a></li>
+                            <li><a href={text.link4} target='_blank' rel='noreferrer'>Resultados de la encuesta</a></li>
                         </ul>
                     </div>
                 </div>

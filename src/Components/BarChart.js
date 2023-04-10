@@ -123,7 +123,7 @@ const BarChart = ({chartInfo, autoSkipp}) => {
             formatter: (value) => {
               const total = 108
               const percentage = value / total * 100
-              return percentage.toFixed(0) + '%';
+              return percentage.toFixed(1) + '%';
             }, 
             anchor: 'top',
             align: 'right',
