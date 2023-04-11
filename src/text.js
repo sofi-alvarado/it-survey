@@ -28,19 +28,19 @@ const text = {
     chartDescription: {
         situacionDeEmpleo: {
             title: 'Situación Laboral',
-            description: 'La gran mayoría de los encuestados tiene un empleo de tiempo completo. Un 66% se dedica únicamente a su trabajo de tiempo completo, y solo un 6.5% estudia mientras trabaja.'
+            description: 'La gran mayoría de los encuestados tiene un empleo de tiempo completo. Un 79.6% se dedica únicamente a su trabajo de tiempo completo, y solo un 6.5% estudia mientras trabaja.'
         },
         softwareDev: {
             title: 'Tipo de Profesional Informático',
-            description: 'Mientras que la gran mayoría de los encuestados se describe como un desarrollador, un 18% se describe como otro tipo de profesional de tecnología informática. Estos trabajan en roles como PM, QA, Administración de sistemas, Administración de bases de datos, DevOps, entre otros.'
+            description: 'Mientras que la gran mayoría de los encuestados se describe como un desarrollador, un 10.2% se describe como otro tipo de profesional de tecnología informática. Estos trabajan en roles como PM, QA, Administración de sistemas, Administración de bases de datos, DevOps, entre otros.'
         },
         modalidadDeTrabajo: {
             title: 'Modalidad de Trabajo',
-            description: 'La gran mayoría de los encuestados trabaja completamente remoto, pero solo 9 (20%) dijo trabajar para una empresa totalmente en el exterior.'
+            description: 'La gran mayoría de los encuestados trabaja completamente remoto, pero solo un 20% de estos dijo trabajar para una empresa totalmente en el exterior.'
         },
         educacion: {
             title: 'Educación Obtenida',
-            description: '75% de los encuestados tiene un título académico, y solamente un 20% de los encuestados que trabajan reportaron no tener uno. Los encuestados con maestría reportaron salarios entre los $1600 y $4500 mensuales.'
+            description: '75% de los encuestados tiene un título académico, y solamente un 20% de los encuestados que trabajan reportaron no tener uno. Los encuestados con maestría reportaron salarios entre los $1,600 y $4,500 mensuales.'
         },
         aprendizaje: {
             title: 'Modalidad de Aprendizaje',
@@ -68,7 +68,7 @@ const text = {
         },
         frecuenciaSalario: {
             title: 'Frecuencia de Salario',
-            description: 'Pregunta hecha para ver la manera en que los encuestados',
+            description: 'Pregunta hecha para saber la manera en que los encuestados reciben su paga.',
         },
         certs: {
             title: 'Certificaciones',
@@ -76,15 +76,15 @@ const text = {
         },
         empresaTipo: {
             title: 'Tipo de Empresa',
-            description: 'Solo un 11% de encuestados reportó trabajar para empresas totalmente en el exterior.',
+            description: 'Solo un 11.1% de encuestados reportó trabajar para empresas totalmente en el exterior.',
         },
         lenguajesHablar: {
             title: 'Lenguajes',
-            description: 'Hablar otro idioma aparte del español es una de las cualidades más buscadas en programadores latinos. Un 31% de los encuestados respondió comunicarse con otro idioma aparte del español.'
+            description: 'Hablar otro idioma aparte del español es una de las cualidades más buscadas en programadores latinos. Un 38% de los encuestados respondió comunicarse con otro idioma aparte del español.'
         },
         nivelDeIngles: {
             title: 'Nivel de Inglés',
-            description: 'Encuestados que cuentan con un nivel de inglés alto reportaron salarios de hasta $5,000 USD mensuales. 90% de los encuestados con nivel de inglés alto y medio trabajan de modalidad remota o híbrida.'
+            description: 'Encuestados que cuentan con un nivel de inglés alto reportaron salarios de hasta $5,000 mensuales. 90% de los encuestados con nivel de inglés alto y medio trabajan de modalidad remota o híbrida.'
         },
         inglesLearning: {
             title: 'Aprendizaje del Inglés',
@@ -92,7 +92,7 @@ const text = {
         },
         lenguajesProgramar: {
             title: 'Lenguajes de Programación',
-            description: 'JavaScript es el lenguaje de programación más popular entre los encuestados. La gran mayoría de los que encuestados que trabajan con JavaScript también reportaron trabajar como desarrolladores full-stack en empresas nacionales, trabajando con uno o más proveedores de nube. Curiosamente, el porcentaje de los encuestados que reportaron trabajar con JavaScript (64%) es similar al porcentaje reportado en las encuestas de StackOverflow del 2022 (65.36%) y del 2021 (64.96%).'
+            description: 'JavaScript es el lenguaje de programación más popular entre los encuestados. La gran mayoría de los que encuestados que trabajan con JavaScript también reportaron trabajar como desarrolladores full-stack en empresas nacionales, trabajando con uno o más proveedores de nube. Curiosamente, el porcentaje de los encuestados que reportaron trabajar con JavaScript (63.9%) es similar al porcentaje reportado en las encuestas de StackOverflow del 2022 (65.36%) y del 2021 (64.96%).'
         },
         cloud: {
             title: 'Cloud',
@@ -112,11 +112,11 @@ const text = {
         },
         os: {
             title: 'Sistemas Operativos',
-            description: 'El uso de macOS de manera profesional es muy reducido en los encuestados de El Salvador (13%), a menos de la mitad de lo reportado en la encuesta de StackOverflow (31%).'
+            description: 'El uso de macOS de manera profesional es muy reducido en los encuestados de El Salvador (18.5%), a menos de la mitad de lo reportado en la encuesta de StackOverflow (31%).'
         },
         git: {
             title: 'Control de versiones',
-            description: 'Ninguna otra tecnología es más popular que Git en la encuesta. El 7% que reportó está compuesto en su mayoría de encuestados que están aprendiendo a programar o sobre tecnología, o profesionales de tecnología que no se describen como desarrolladores de software.'
+            description: 'Ninguna otra tecnología es más popular que Git en la encuesta. El 7.4% que reportó no usar ningún control de versiones está compuesto en su mayoría de encuestados que están aprendiendo a programar o sobre tecnología, o profesionales de tecnología que no se describen como desarrolladores de software.'
         },
         versionControl: {
             title: 'Plataforma de Control de Versiones',
@@ -124,15 +124,15 @@ const text = {
         },
         blockchain: {
             title: 'Blockchain, Crypto y Web3',
-            description: 'La opinión sobre las tecnologías Web3 son bastante diferentes en los encuestados de El Salvador a comparación de la encuesta de StackOverflow. 50% de los encuestados reportó tener una opinión favorable o muy favorable, mientras que solo un 7% tiene una opinión desfavorable o muy desfavorable.'
+            description: 'La opinión sobre las tecnologías Web3 son bastante diferentes en los encuestados de El Salvador a comparación de la encuesta de StackOverflow. 50% de los encuestados reportó tener una opinión favorable o muy favorable, mientras que solo un 6.5% tiene una opinión desfavorable o muy desfavorable.'
         },
         infosec: {
             title: 'Seguridad Informática',
-            description: '66% de los encuestados respondió tener algún tipo de educación o entrenamiento en seguridad informática.'
+            description: '66.7% de los encuestados respondió tener algún tipo de educación o entrenamiento en seguridad informática.'
         },
         implementaciones: {
             title: 'Otras Tecnologías Implementadas',
-            description: 'Pregunta creada para ver las tendencias que consideramos que la encuesta de StackOverflow no abarca, sobre todo, tendencias relacionadas con DevOps y Agile.'
+            description: 'Pregunta creada para mostrar las tendencias que consideramos que la encuesta de StackOverflow no abarca, sobre todo, tendencias relacionadas con DevOps y Agile.'
         },
         edad: {
             title: 'Edad',
@@ -140,7 +140,7 @@ const text = {
         },
         genero: {
             title: 'Género',
-            description: 'Solo un 11% de los encuestados reportó ser mujer. Este porcentaje es mayor que el 5% que respondió ser mujer en la encuesta de StackOverflow. Ningun encuestado seleccionó la opción de “otro” y solo uno prefirió no decir qué género le describe mejor.'
+            description: 'Solo un 11.1% de los encuestados reportó ser mujer. Este porcentaje es mayor que el 5% que respondió ser mujer en la encuesta de StackOverflow. Ningun encuestado seleccionó la opción de “otro” y solo uno prefirió no decir qué género le describe mejor.'
         },
         callcenter: {
             title: 'Experiencia en Call Center',
@@ -156,7 +156,7 @@ const text = {
         },
         duracion: {
             title: 'Duración de la Encuesta',
-            description: 'Futuras ediciones de esta encuesta podrían tener la misma cantidad de preguntas, gracias a que 84% de los encuestados evaluó esta encuesta con una duración apropiada.'
+            description: 'Futuras ediciones de esta encuesta podrían tener la misma cantidad de preguntas, gracias a que 84.3% de los encuestados evaluó esta encuesta con una duración apropiada.'
         },
         dificultad: {
             title: 'Dificultad de la Encuesta',
