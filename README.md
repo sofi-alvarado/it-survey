@@ -21,10 +21,9 @@ Accede al sitio web 👉 https://encuesta-tech-sv.link/ 👈
 * ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=flat&logo=npm&logoColor=white)
 * ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=flat&logo=bootstrap&logoColor=white) 
 * ![Chart.js](https://img.shields.io/badge/chart.js-F5788D.svg?style=flat&logo=chart.js&logoColor=white) 
-* ![MUI](https://img.shields.io/badge/MUI-%230081CB.svg?style=flat&logo=material-ui&logoColor=white) 
 * ![React](https://img.shields.io/badge/react-%2320232a.svg?style=flat&logo=react&logoColor=%2361DAFB)
 
-Este proyecto fue desarrollado con JavaScript haciendo uso de librerías como ReactJS en la creación de componentes reutilizables en la aplicación, en conjunto con Bootstrap y Material UI para el diseño del mismo. También se hizo uso de la librería ChartJS para la creación de las gráficas. 
+Este proyecto fue desarrollado con JavaScript haciendo uso de librerías como ReactJS en la creación de componentes reutilizables en la aplicación, en conjunto con Bootstrap para el diseño del mismo. También se hizo uso de la librería ChartJS para la creación de las gráficas. 
 
 Para hosting se optó por AWS. Los diferentes servicios utilizados son:
 
